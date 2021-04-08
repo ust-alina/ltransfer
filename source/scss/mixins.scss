@@ -1,0 +1,13 @@
+@mixin flexbox(){display:-webkit-box;
+    display:-moz-box; 
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;}
+    
+    @mixin font($family1, $family2, $weight, $size){
+        font-family: $family1, $family2;
+        font-weight: $weight;
+        font-size: $size;
+    }
+
+
