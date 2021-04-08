@@ -70,6 +70,11 @@ body {
       margin-right: 26px;
       font-size: 18px;
       line-height: 122.8%;
+      a {
+        &:hover {
+          color: #1969D2;
+        }
+      }
     }
   }
   
@@ -95,6 +100,9 @@ body {
       font-weight: bold;
       font-size: 16px;
       margin-right: 16px;
+      &:hover {
+        background: #3d7aca;
+      }
       img {
         margin-right: 12px;
       }
@@ -200,16 +208,25 @@ body {
 
 
 
-
+.search_form_field {
+  &:first-child {
+    padding-left: 10px;
+  }
+  &:last-child {
+    padding-right: 10px;
+  }
+}
 
 .field_container {
-  width: 280px;
+  width: 266px;
   height: 64px;
   background: #EFF9FF;
   border: 1px solid rgba(157, 202, 230, 0.2);
   box-sizing: border-box;
   border-radius: 5px;
   @extend %flex_container; 
+
+  
   input {
     background: transparent;
     font-weight: 500;
@@ -218,6 +235,7 @@ body {
     &::placeholder {
       color: #84A6BA;
     }
+
   }
   label {
     font-weight: 500;
@@ -236,15 +254,16 @@ body {
     margin-right: 7px;
     position: relative;
     text-align: center;
-    width: 15px;
-    height: 15px;
+    width: 14px;
+    height: 14px;
     background: #fff;
     vertical-align: middle;
     border: 1px solid #84A6BA;
     box-sizing: border-box;
     border-radius: 5px;
-    font-size: 15px;
-    line-height: 15px;
+    font-size: 12px;
+    line-height: 12px;
+    margin-bottom: 2px;
   }
 
   input[type="checkbox"]:checked + .return_checkbox_label:before {

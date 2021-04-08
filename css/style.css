@@ -127,6 +127,9 @@ body {
   font-size: 18px;
   line-height: 122.8%;
 }
+.header_navbar ul li a:hover {
+  color: #1969D2;
+}
 
 .header_phone a {
   width: 174px;
@@ -139,6 +142,9 @@ body {
   font-weight: bold;
   font-size: 16px;
   margin-right: 16px;
+}
+.header_phone a:hover {
+  background: #3d7aca;
 }
 .header_phone a img {
   margin-right: 12px;
@@ -235,8 +241,15 @@ body {
   border-radius: 5px;
 }
 
+.search_form_field:first-child {
+  padding-left: 10px;
+}
+.search_form_field:last-child {
+  padding-right: 10px;
+}
+
 .field_container {
-  width: 280px;
+  width: 266px;
   height: 64px;
   background: #EFF9FF;
   border: 1px solid rgba(157, 202, 230, 0.2);
@@ -269,15 +282,16 @@ body {
   margin-right: 7px;
   position: relative;
   text-align: center;
-  width: 15px;
-  height: 15px;
+  width: 14px;
+  height: 14px;
   background: #fff;
   vertical-align: middle;
   border: 1px solid #84A6BA;
   box-sizing: border-box;
   border-radius: 5px;
-  font-size: 15px;
-  line-height: 15px;
+  font-size: 12px;
+  line-height: 12px;
+  margin-bottom: 2px;
 }
 .field_container input[type=checkbox]:checked + .return_checkbox_label:before {
   content: "";
