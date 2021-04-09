@@ -6,6 +6,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <title>Ltransfer</title>
   </head>
   <body>
@@ -20,27 +21,49 @@
       </div>
 
       <div class="header_center_block">
-        <nav class="header_navbar navbar">
+        
+        <div class="header_menu">
+          <nav class="header_navbar navbar">
           <ul>
             <li class="nav-item"><a class="nav-link" href="#">Расписание</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Маршруты</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Информация</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
           </ul>
-        </nav>
+          </nav>
+        </div>
 
         <div class="header_select">
-          <ul class="language_select">
-            <li class="active">Ru</li>
-            <li>lt</li>
-          </ul>
-          <ul class="currency_select">
-            <li class="active">Eur</li>
-            <li>Byn</li>
-          </ul>
+          <div class="language_select_block">
+            
+            <ul class="language_select">
+              <li class="active"><img src="source/img/emojione-v1_flag-for-russia.png"><span>Ru</span></li>
+              <li>lt</li>
+            </ul>
+
+            <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.64645 4.35355C3.84171 4.54882 4.15829 4.54882 4.35355 4.35355L7.53553 1.17157C7.7308 0.976311 7.7308 0.659728 7.53553 0.464466C7.34027 0.269204 7.02369 0.269204 6.82843 0.464466L4 3.29289L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.64645 4.35355ZM3.5 3V4H4.5V3H3.5Z" fill="#1969D2"/>
+              </svg>
+          </div>
+
+          <span class="select_line"></span>
+          
+         <div class="currency_select_block">
+            <ul class="currency_select">
+              <li class="active"><img src="source/img//Euro.png"><span>Eur</span></li>
+              <li>Byn</li>
+            </ul>
+
+            <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.64645 4.35355C3.84171 4.54882 4.15829 4.54882 4.35355 4.35355L7.53553 1.17157C7.7308 0.976311 7.7308 0.659728 7.53553 0.464466C7.34027 0.269204 7.02369 0.269204 6.82843 0.464466L4 3.29289L1.17157 0.464466C0.976311 0.269204 0.659728 0.269204 0.464466 0.464466C0.269204 0.659728 0.269204 0.976311 0.464466 1.17157L3.64645 4.35355ZM3.5 3V4H4.5V3H3.5Z" fill="#1969D2"/>
+              </svg>
+         </div>
         </div>
       </div>
-
+        
+      <div class="menu-burger__header">
+        <span></span>
+      </div>
       
 
       <div class="phones">
@@ -52,65 +75,279 @@
 
     <main>
 
-     <div class="main_banner">
-      <div class='main_banner_overflow'></div>
+     
+      <div class="main_banner">
+        <div class='main_banner_overflow'></div>
+        <div class="wrapper">
+          <div class="main_banner_text">
+          <h1>BALTBUS
+          <span>Надежный трансфер по городам Литвы и Беларуси</span>
+          </h1>
+          </div>
+  
+         
+          <form class="main_banner_form">
+          <div class="main_banner_search_form">
+            <div class="search_form_field">
+              <div class="field_container">
+                <input placeholder="Поеду из" value="" name="from" list="from_city">
+                <datalist id="from_city">
+                  <option value="Вильнюс"></option>
+                  <option value="Каунас"></option>
+                  <option value="Шауляй"></option>
+                 </datalist>
+              </div>
+            </div>
+  
+            <div class="search_form_field">
+              <div class="field_container">
+                <input placeholder="Поеду в" value="" name="to" list="to_city">
+                <datalist id="to_city">
+                  <option value="Вильнюс"></option>
+                  <option value="Каунас"></option>
+                  <option value="Шауляй"></option>
+                 </datalist>
+              </div>
+            </div>
+            
+            <div class="search_form_field">
+              <div class="field_container">
+                <input type="text" placeholder="Дата отправления" value="" name="date" id="datepicker">
+              </div>
+            </div>
+            
+            <div class="search_form_field">
+              <div class="field_container">
+                <input type="checkbox" value="" name="return" id="return">
+                <label for="return" class="return_checkbox_label">Приобрету обратный  билет</label>
+              </div>
+            </div>
+  
+          
+          </div>
+        <div class="main_banner_search_form_button">
+          <button to="" type="submit" class="button">
+            Искать поездку
+          </button>
+        </div>
+          </form>
+  
+        </div>
+      </div>
+     
+
+     <!--Почему выбирают нас-->
+     <div class="wrapper">
+       <div class="main_why">
+         <h2 class="main_title">Почему пассажиры выбирают нас?</h2>
+         <div class="main_why_container container">
+
+            <div class="main_why_box box">
+             <div class="main_why_box_img"><img src="source/img/Vector_1.png"></div>
+             <div class="main_why_box_number">01</div>
+             <div class="main_why_box_text">
+               <p>На протяжении всей поездки
+                вы сможете отвлечься за просмотром ТВ</p>
+             </div>
+            </div>
+
+            <div class="main_why_box box">
+            <div class="main_why_box_img"><img src="source/img/Vector_2.png"></div>
+            <div class="main_why_box_number">02</div>
+            <div class="main_why_box_text">
+              <p>Постоянные клиенты
+                получают скидку</p>
+            </div>
+            </div>
+
+            <div class="main_why_box box">
+            <div class="main_why_box_img"><img src="source/img/Vector_3.png"></div>
+            <div class="main_why_box_number">03</div>
+            <div class="main_why_box_text">
+              <p>Tax Free, который поможет сэкономить значительную часть финансовых средств</p>
+            </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      
+      <!--Место для акции, если она добавлена в админке-->
+      <div class="main_stock">
+         <img src="source/img/Rectangle_stock.jpg" alt="">
+      </div>
+
+
+      <!--ПОПУЛЯРНЫЕ МАРШРУТЫ, ДОБАВЛЯЮТСЯ В АДМИНКЕ, МОЖЕТ БЫТЬ РАЗНОЕ КОЛИЧЕСТВО-->
       <div class="wrapper">
-        <div class="main_banner_text">
-        <h1>BALTBUS
-        <span>Надежный трансфер по городам Литвы и Беларуси</span>
-        </h1>
-        </div>
+        <div class="main_popular">
+          <h2 class="main_title">Популярные маршруты</h2>
+          <div class="main_popular_link">
+            <a href="#">
+              <span>Все Маршруты</span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19" stroke="#282828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 5L19 12L12 19" stroke="#282828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+          <div class="main_popular_container container popular_slider">
+ 
+             <div class="main_popular_box box_1 slider__item">
+               <img src="source/img/Vilnus.jpg">
+               <div class="main_popular_box_overflow"></div>
+               <div class="main_popular_box_overflow_2"></div>
+               <div class="main_popular_box_route">Вильнюс - Минск</div>
+               <div class="main_popular_box_price">35 BYN</div>
+               <a class="button main_popular_box_button">Подробнее</a>
+             </div>
 
-       
-        <form class="main_banner_form">
-        <div class="main_banner_search_form">
-          <div class="search_form_field">
-            <div class="field_container">
-              <input placeholder="Поеду из" value="" name="from">
+             <div class="main_popular_box box_1 slider__item">
+              <img src="source/img/shauljaj.jpg">
+              <div class="main_popular_box_overflow"></div>
+              <div class="main_popular_box_overflow_2"></div>
+              <div class="main_popular_box_route">Шауляй - Минск</div>
+              <div class="main_popular_box_price">120 BYN</div>
+              <a class="button main_popular_box_button">Подробнее</a>
             </div>
-          </div>
 
-          <div class="search_form_field">
-            <div class="field_container">
-              <input placeholder="Поеду в" value="" name="to">
+            <div class="main_popular_box box_1 slider__item">
+              <img src="source/img/lithuania-kaunas.jpg">
+              <div class="main_popular_box_overflow"></div>
+              <div class="main_popular_box_overflow_2"></div>
+              <div class="main_popular_box_route">Минск - Каунас</div>
+              <div class="main_popular_box_price">10 BYN</div>
+              <a class="button main_popular_box_button">Подробнее</a>
             </div>
-          </div>
-          
-          <div class="search_form_field">
-            <div class="field_container">
-              <input placeholder="Дата отправления" value="" name="date">
-            </div>
-          </div>
-          
-          <div class="search_form_field">
-            <div class="field_container">
-              <input type="checkbox" value="" name="return" id="return">
-              <label for="return" class="return_checkbox_label">Приобрету обратный  билет</label>
-            </div>
-          </div>
 
+            <div class="main_popular_box box_1 slider__item">
+              <img src="source/img/minsk-vilnus.jpg">
+              <div class="main_popular_box_overflow"></div>
+              <div class="main_popular_box_overflow_2"></div>
+              <div class="main_popular_box_route">Минск - Вильнюс</div>
+              <div class="main_popular_box_price">35 BYN</div>
+              <a class="button main_popular_box_button">Подробнее</a>
+            </div>
+
+            <div class="main_popular_box box_1 slider__item">
+              <img src="source/img/kaunas-minsk.jpg">
+              <div class="main_popular_box_overflow"></div>
+              <div class="main_popular_box_overflow_2"></div>
+              <div class="main_popular_box_route">Каунас - Минск</div>
+              <div class="main_popular_box_price">120 BYN</div>
+              <a class="button main_popular_box_button">Подробнее</a>
+            </div>
+
+            <div class="main_popular_box box_1 slider__item">
+              <img src="source/img/shauljaj_2.jpg">
+              <div class="main_popular_box_overflow"></div>
+              <div class="main_popular_box_overflow_2"></div>
+              <div class="main_popular_box_route">Минск - Шауляй</div>
+              <div class="main_popular_box_price">10 BYN</div>
+              <a class="button main_popular_box_button">Подробнее</a>
+            </div>
+ 
+            
+ 
+           </div>
+         </div>
+       </div>
         
+       <!--БЛОК ДЛЯ ВЫВОДА ТЕКСТА ИЗ РЕДАКТОРА-->
+        <div class="main_seo_text">
+          <div class="wrapper">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt provident quia odio nisi, iure soluta reprehenderit reiciendis cumque, omnis distinctio placeat recusandae ut quisquam accusantium quis. Optio sint accusantium dolorum.</p>
+          </div>
         </div>
-      <div class="main_banner_search_form_button">
-        <button to="" type="submit" class="button">
-          Искать поездку
-        </button>
-      </div>
-        </form>
 
-      </div>
-     </div>
+        <!--Форма Нужна помощь-->
+
+        <div class="wrapper">
+          <div class="main_help_form">
+            <h2 class="main_title">Нужна наша помощь?</h2>
+            <div class="main_help_container">
+              <div class="main_help_container_overflow"></div>
+              <div class="main_help_box">
+                <div class="main_help_text">Оставьте заявку, и наш менеджер<br>
+                  свяжется с Вами в ближайшее время</div>
+                  <form class="help_callback-form">
+                    <div class="help_callback-form_row">
+                      <input type="tel" placeholder="Введите номер" name="phone">
+                      <button to="" type="submit" class="button help_callback-form_butto">
+                        <span>Отправить</span>
+                        <span><img src="source/img/button_arrow.png"></span>
+                      </button>
+                     
+                    </div>
+                  </form>
+              </div>
+            </div>
+          </div>
+        </div>
 
     </main>
 
-    <footer>
-
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer_brand footer_mobile_hide">BALTBUS.LT</div>
+        <div class="footer_container">
+          
+          <div class="footer_box">
+            <div class="footer_brand">BALTBUS.LT</div>
+            <p class="footer_mobile_hide">MO BALTBUS<br>
+              Код 305718819 <br>
+              Юридический адрес:<br>
+              Ю. Савицкио ул. 4, Вильнюс<p>
+            <p>baltbus@inbox.lt</p>
+            <p class="footer_mobile_hide">© 2021</p>
+          </div>
+          <div class="footer_box footer_mobile_hide">
+            <ul>
+              <li><a href="#">Минск-Вильнюс</a></li>
+              <li><a href="#">Минск-Каунас</a></li>
+              <li><a href="#">Минск-Шауляй</a></li>
+            </ul>
+          </div>
+          <div class="footer_box footer_mobile_hide">
+            <ul>
+              <li><a href="#">Вильнюс-Минск</a></li>
+              <li><a href="#">Каунас-Минск</a></li>
+              <li><a href="#">Шауляй-Минск</a></li>
+            </ul>
+          </div>
+          <div class="footer_box footer_mobile_hide">
+            <ul>
+              <li><a href="#">Маршруты</a></li>
+              <li><a href="#">Информация</a></li>
+              <li><a href="#">Контакты</a></li>
+              <li><a href="#">Расписание</a></li>
+            </ul>
+          </div>
+          <div class="footer_box">
+            <div class="footer_phones">
+              <a href="#">+ 370 641 27991 <img src="source/img/footer_viber.svg"></a>
+              <a href="#">+ 375 (29) 345-52-51 <img src="source/img/footer_viber.svg"></a>
+            </div>
+          </div>
+        </div>
+          
+      </div>
     </footer>
   
 
   <!--Подключаем Jquery-->
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!--Подключаем Slick slider-->
+  <script src='js/slick.min.js'></script> 
   <!--Подключаем MAIN.JS-->
   <script src='js/main.js'></script> 
+  <!--Подключаем date.JS-->
+  <script src='js/date.js'></script> 
+  
   </body>
 </html>
+
+
+
+<!--9 часов-->
