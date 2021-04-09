@@ -79,7 +79,7 @@ $('#return').click(function(){
 
 function windowSize3(){
 	if ($(window).width() <'550'){
-	$( ".header_navbar ul" ).append( $(".phones") );
+	$( ".header_navbar ul" ).append( $(".header_phones") );
 		
 	}
 }

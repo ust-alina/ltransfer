@@ -13,7 +13,6 @@
     flex-wrap: wrap;
 }
 
-$testBorder: 1px solid blue;
 
 body {
   @include font('Roboto', sans-serif, 400, 16px );
@@ -221,7 +220,7 @@ body {
     
   }
 
-  .phones {
+  .header_phones {
     @media(max-width: 1200px){
       order: 1;
       margin-top: 20px;
@@ -321,7 +320,7 @@ body {
     display: none;
   }
 }
-/*-----------*/
+/*-----ГЛАВНЫЙ ЭКРАН------*/
 
 
 .main_banner {
@@ -392,6 +391,8 @@ body {
   }
   
 }
+
+/*---ФОРМА НА ГЛАВНОМ ЭКРАНЕ----*/
 
 .main_banner_form {
   position: relative;
@@ -582,6 +583,115 @@ body {
   }
 }
 
+/*----Календарь---*/
+
+.ui-datepicker {
+  background: #EFF9FF;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 264px;
+  
+
+.ui-corner-all {
+  background: #1969D2;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+  position: relative;
+  .ui-datepicker-prev {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    font-size: 0;
+    background-image: url('../source/img/date_icon_left.png');
+    background-repeat: no-repeat;
+    background-position: 4px;
+    background-size: 14px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    &.ui-state-disabled {
+      background-color: #84A6BA;
+    }
+}
+.ui-datepicker-next {
+  position: absolute;
+    right: 8px;
+    top: 8px;
+    font-size: 0;
+    background-image: url('../source/img/date_icon_right.png');
+    background-repeat: no-repeat;
+    background-position: 6px;
+    background-size: 14px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    &.ui-state-disabled {
+      background-color: #84A6BA;
+    }
+}
+
+}
+.ui-datepicker-title {
+  padding: 10px 0;
+  font-size: 18px;
+}
+}
+
+.ui-datepicker-calendar {
+  padding: 10px;
+  width: 100%;
+  thead {
+  display: flex;
+  margin-top: 1em;
+    tr {
+      display: flex;
+      justify-content: space-between;
+       width: 100%;
+    }
+  }
+  tbody {
+    width: 100%;
+      tr{
+        display: flex;
+        justify-content: space-between;
+        td{
+        flex: 1 1 0%;
+        height: 32px;
+        padding: 0px;
+        font-size: 14px;
+        line-height: 32px;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        outline: none;
+        &:not(.ui-state-disabled) {
+          &:hover {
+            background: #1969D2;
+            color: #fff;
+            border-radius: 2px;
+          }
+          &:hover .ui-state-default{
+            color: #fff;
+          }
+        }
+        }
+      }
+    }
+
+    .ui-state-disabled .ui-state-default{
+      color: #84A6BA;
+    }
+    .ui-state-default{
+      color: #181818;
+    }
+}
+
 /*-----ПОЧЕМУ ВЫБИРАЮТ НАС------*/
 
 .main_title {
@@ -752,6 +862,12 @@ body {
     z-index: 1;
     border-radius: 5px;
     
+  }
+  &:hover .main_popular_box_button {
+    background: #3d7aca;
+  }
+  &:active .main_popular_box_button {
+    background: #3d7aca;
   }
   @media(max-width: 768px){
     width: 350px;
@@ -1177,115 +1293,7 @@ body {
 
 
 
-/*----Календарь---*/
-
-.ui-datepicker {
-  background: #EFF9FF;
-  box-sizing: border-box;
-  border-radius: 5px;
-  margin-top: 10px;
-  width: 264px;
-  
-
-.ui-corner-all {
-  background: #1969D2;
-  color: #fff;
-  text-align: center;
-  border-radius: 5px 5px 0 0;
-  position: relative;
-  .ui-datepicker-prev {
-    position: absolute;
-    left: 8px;
-    top: 8px;
-    font-size: 0;
-    background-image: url('../source/img/date_icon_left.png');
-    background-repeat: no-repeat;
-    background-position: 4px;
-    background-size: 14px;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background-color: #fff;
-    cursor: pointer;
-    &.ui-state-disabled {
-      background-color: #84A6BA;
-    }
-}
-.ui-datepicker-next {
-  position: absolute;
-    right: 8px;
-    top: 8px;
-    font-size: 0;
-    background-image: url('../source/img/date_icon_right.png');
-    background-repeat: no-repeat;
-    background-position: 6px;
-    background-size: 14px;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background-color: #fff;
-    cursor: pointer;
-    &.ui-state-disabled {
-      background-color: #84A6BA;
-    }
-}
-
-}
-.ui-datepicker-title {
-  padding: 10px 0;
-  font-size: 18px;
-}
-}
-
-.ui-datepicker-calendar tbody {
-  width: 100%;
-  tr{
-    display: flex;
-    justify-content: space-between;
-    td{
-    flex: 1 1 0%;
-    height: 32px;
-    padding: 0px;
-    font-size: 14px;
-    line-height: 32px;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    outline: none;
-    &:not(.ui-state-disabled) {
-      &:hover {
-        background: #1969D2;
-        color: #fff;
-        border-radius: 2px;
-      }
-      &:hover .ui-state-default{
-        color: #fff;
-      }
-    }
-    
-    }
-  }
-}
-
-.ui-datepicker-calendar {
-  padding: 10px;
-  width: 100%;
-  thead {
-  display: flex;
-  margin-top: 1em;
-    tr {
-      display: flex;
-      justify-content: space-between;
-       width: 100%;
-    }
-  }
-}
 
 
-.ui-state-disabled .ui-state-default{
-  color: #84A6BA;
-}
 
-.ui-state-default{
-  color: #181818;
-}
+

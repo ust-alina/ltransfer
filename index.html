@@ -23,13 +23,25 @@
       <div class="header_center_block">
         
         <div class="header_menu">
-          <nav class="header_navbar navbar">
-          <ul>
-            <li class="nav-item"><a class="nav-link" href="#">Расписание</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Маршруты</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Информация</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
-          </ul>
+          <nav class="header_navbar navbar" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+            <ul itemprop="about" itemscope="" itemtype="http://schema.org/ItemList">
+            <li class="nav-item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ItemList">
+              <a class="nav-link" href="#" itemprop="url">Расписание</a>
+              <meta itemprop="name" content="Расписание" />
+            </li>
+            <li class="nav-item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ItemList">
+              <a class="nav-link" href="#" itemprop="url">Маршруты</a>
+              <meta itemprop="name" content="Маршруты" />
+            </li>
+            <li class="nav-item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ItemList">
+              <a class="nav-link" href="#" itemprop="url">Информация</a>
+              <meta itemprop="name" content="Информация" />
+            </li>
+            <li class="nav-item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ItemList">
+              <a class="nav-link" href="#" itemprop="url">Контакты</a>
+              <meta itemprop="name" content="Контакты" />
+            </li>
+            </ul>
           </nav>
         </div>
 
@@ -67,7 +79,7 @@
       </div>
       
 
-      <div class="phones">
+      <div class="header_phones">
         <div class="header_phone"><a href="tel:+37064127991"><img src="source/img/bi_telephone-forward.svg"><span>+ 370 641 27991</span></a><a href="viber://chat?number=%2B37064127991"><img src="source/img/Viber.png"></a></div>
     
       </div>
@@ -128,7 +140,7 @@
               <div class="field_container">
                 <input type="text" placeholder="Дата обратной поездки" value="" name="return_date" id="datepicker_return">
               </div>
-              <span class="close_return_date">X</span>
+              <span class="close_return_date">х</span>
             </div>
           </div>
         <div class="main_banner_search_form_button">
@@ -305,19 +317,19 @@
 
     </main>
 
-    <footer class="footer">
+    <footer class="footer" itemscope itemtype="https://schema.org/Organization">
       <div class="wrapper">
-        <div class="footer_brand footer_mobile_hide">BALTBUS.LT</div>
+        <div class="footer_brand footer_mobile_hide" itemprop="name">BALTBUS.LT</div>
         <div class="footer_container">
           
           <div class="footer_box">
             <div class="footer_brand">BALTBUS.LT</div>
-            <p class="footer_mobile_hide">MO BALTBUS<br>
-              Код 305718819 <br>
+            <p class="footer_mobile_hide" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">MO BALTBUS<br>
+              Код <span itemprop="postalCode">305718819</span> <br>
               Юридический адрес:<br>
-              Ю. Савицкио ул. 4, Вильнюс<p>
-            <a href="mailto:baltbus@inbox.lt">baltbus@inbox.lt</a>
-            <p class="footer_mobile_hide">© 2021</p>
+              <span itemprop="streetAddress">Ю. Савицкио ул. 4,</span> <span itemprop="addressLocality">Вильнюс</span><p>
+            <a href="mailto:baltbus@inbox.lt"><span itemprop="email">baltbus@inbox.lt</span></a>
+            <p class="footer_mobile_hide">&copy; 2021</p>
           </div>
           <div class="footer_box footer_mobile_hide">
             <ul>
@@ -343,8 +355,8 @@
           </div>
           <div class="footer_box">
             <div class="footer_phones">
-              <a href="tel:+37064127991">+ 370 641 27991 <img src="source/img/footer_viber.svg"></a>
-              <a href="tel:+375293455251">+ 375 (29) 345-52-51 <img src="source/img/footer_viber.svg"></a>
+              <a href="tel:+37064127991"><span itemprop="telephone">+ 370 641 27991 </span><img src="source/img/footer_viber.svg"></a>
+              <a href="tel:+375293455251"><span itemprop="telephone">+ 375 (29) 345-52-51 </span><img src="source/img/footer_viber.svg"></a>
             </div>
           </div>
         </div>
@@ -369,4 +381,3 @@
 
 
 
-<!--9 часов-->
