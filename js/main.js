@@ -50,6 +50,8 @@ $('#return').click(function(){
             $('#return').prop('checked', false);
 
       });
+
+ 
       
            
 
@@ -69,4 +71,16 @@ $('#return').click(function(){
       $(".popular_slider").slick("unslick");
       }
 
+      
+      
+
 });
+
+
+function windowSize3(){
+	if ($(window).width() <'550'){
+	$( ".header_navbar ul" ).append( $(".phones") );
+		
+	}
+}
+$(window).on('load resize',windowSize3);
