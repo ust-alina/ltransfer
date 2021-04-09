@@ -241,6 +241,7 @@ body {
   height: 32px;
   overflow: hidden;
   cursor: pointer;
+  background: #fff;
 }
 .language_select li, .currency_select li {
   text-align: center;
@@ -264,15 +265,27 @@ body {
   color: #1969D2;
 }
 
-.language_select.open, .currency_select.open {
+.currency_select.open {
   height: 64px;
   margin-bottom: -32px;
-  
+}
+
+.language_select.open{
+  height: 96px;
+  margin-bottom: -64px;
+  position: relative;
+  z-index: 10;
 }
 
 .language_select_block, .currency_select_block {
   svg {
     margin-bottom: 5px;
+  }
+}
+
+.currency_select_block {
+  @media(max-width: 480px){
+    display: none;
   }
 }
 
@@ -300,6 +313,9 @@ body {
   width: 1px;
   height: 22px;
   background: #181818;
+  @media(max-width: 480px){
+    display: none;
+  }
 }
 /*-----------*/
 
@@ -748,6 +764,7 @@ body {
   right:0;
   bottom: 0;
   border-radius: 5px 0 5px 0;
+  box-shadow: none;
   @media(max-width: 480px){
     width: auto;
     padding: 9px 32px;
@@ -981,7 +998,7 @@ body {
   }
   p {
     color: #84A6BA;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 18px;
     line-height: 140%;
     margin-top: 22px;
@@ -991,7 +1008,7 @@ body {
     }
   }
   li {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 18px;
     line-height: 122.8%;
     margin-bottom: 28px;
@@ -1031,14 +1048,4 @@ body {
 }
 
 
-
-/*---------КАЛЕНДАРЬ------------*/
-
-.ui-datepicker {
-  margin-top: 6px;
-  padding: 6px;
-  background: #EFF9FF;
-  border: 1px solid rgba(157, 202, 230, 0.2);
-  border-radius: 5px;
-}
 
