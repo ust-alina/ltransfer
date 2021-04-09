@@ -6,7 +6,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="fonts/icomoon/style.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
     <title>Ltransfer</title>
   </head>
   <body>
@@ -68,7 +68,7 @@
       
 
       <div class="phones">
-        <div class="header_phone"><a href="#"><img src="source/img/bi_telephone-forward.svg"><span>+ 370 641 27991</span></a><img src="source/img/Viber.png"></div>
+        <div class="header_phone"><a href="tel:+37064127991"><img src="source/img/bi_telephone-forward.svg"><span>+ 370 641 27991</span></a><a href="viber://chat?number=%2B37064127991"><img src="source/img/Viber.png"></a></div>
     
       </div>
       </header>
@@ -117,14 +117,19 @@
               </div>
             </div>
             
-            <div class="search_form_field">
+            <div class="search_form_field checked_field">
               <div class="field_container">
                 <input type="checkbox" value="" name="return" id="return">
                 <label for="return" class="return_checkbox_label">Приобрету обратный  билет</label>
               </div>
             </div>
   
-          
+            <div class="search_form_field search_hide_field">
+              <div class="field_container">
+                <input type="text" placeholder="Дата обратной поездки" value="" name="return_date" id="datepicker_return">
+              </div>
+              <span class="close_return_date">X</span>
+            </div>
           </div>
         <div class="main_banner_search_form_button">
           <button to="" type="submit" class="button">
@@ -195,57 +200,69 @@
           <div class="main_popular_container container popular_slider">
  
              <div class="main_popular_box box_1 slider__item">
-               <img src="source/img/Vilnus.jpg">
-               <div class="main_popular_box_overflow"></div>
-               <div class="main_popular_box_overflow_2"></div>
-               <div class="main_popular_box_route">Вильнюс - Минск</div>
-               <div class="main_popular_box_price">35 BYN</div>
-               <a class="button main_popular_box_button">Подробнее</a>
+               <a href="#">
+                 <img src="source/img/Vilnus.jpg">
+                 <div class="main_popular_box_overflow"></div>
+                 <div class="main_popular_box_overflow_2"></div>
+                 <div class="main_popular_box_route">Вильнюс - Минск</div>
+                 <div class="main_popular_box_price">35 BYN</div>
+                 <div class="button main_popular_box_button">Подробнее</div>
+               </a>
              </div>
 
              <div class="main_popular_box box_1 slider__item">
-              <img src="source/img/shauljaj.jpg">
-              <div class="main_popular_box_overflow"></div>
-              <div class="main_popular_box_overflow_2"></div>
-              <div class="main_popular_box_route">Шауляй - Минск</div>
-              <div class="main_popular_box_price">120 BYN</div>
-              <a class="button main_popular_box_button">Подробнее</a>
+              <a href="#">
+                <img src="source/img/shauljaj.jpg">
+                <div class="main_popular_box_overflow"></div>
+                <div class="main_popular_box_overflow_2"></div>
+                <div class="main_popular_box_route">Шауляй - Минск</div>
+                <div class="main_popular_box_price">120 BYN</div>
+                <div class="button main_popular_box_button">Подробнее</div>
+              </a>
             </div>
 
             <div class="main_popular_box box_1 slider__item">
-              <img src="source/img/lithuania-kaunas.jpg">
-              <div class="main_popular_box_overflow"></div>
-              <div class="main_popular_box_overflow_2"></div>
-              <div class="main_popular_box_route">Минск - Каунас</div>
-              <div class="main_popular_box_price">10 BYN</div>
-              <a class="button main_popular_box_button">Подробнее</a>
+              <a href="#">
+                <img src="source/img/lithuania-kaunas.jpg">
+                <div class="main_popular_box_overflow"></div>
+                <div class="main_popular_box_overflow_2"></div>
+                <div class="main_popular_box_route">Минск - Каунас</div>
+                <div class="main_popular_box_price">10 BYN</div>
+                <div class="button main_popular_box_button">Подробнее</div>
+              </a>
             </div>
 
             <div class="main_popular_box box_1 slider__item">
-              <img src="source/img/minsk-vilnus.jpg">
-              <div class="main_popular_box_overflow"></div>
-              <div class="main_popular_box_overflow_2"></div>
-              <div class="main_popular_box_route">Минск - Вильнюс</div>
-              <div class="main_popular_box_price">35 BYN</div>
-              <a class="button main_popular_box_button">Подробнее</a>
+              <a href=#>
+                <img src="source/img/minsk-vilnus.jpg">
+                <div class="main_popular_box_overflow"></div>
+                <div class="main_popular_box_overflow_2"></div>
+                <div class="main_popular_box_route">Минск - Вильнюс</div>
+                <div class="main_popular_box_price">35 BYN</div>
+                <div class="button main_popular_box_button">Подробнее</div>
+              </a>
             </div>
 
             <div class="main_popular_box box_1 slider__item">
-              <img src="source/img/kaunas-minsk.jpg">
-              <div class="main_popular_box_overflow"></div>
-              <div class="main_popular_box_overflow_2"></div>
-              <div class="main_popular_box_route">Каунас - Минск</div>
-              <div class="main_popular_box_price">120 BYN</div>
-              <a class="button main_popular_box_button">Подробнее</a>
+              <a href="#">
+                <img src="source/img/kaunas-minsk.jpg">
+                <div class="main_popular_box_overflow"></div>
+                <div class="main_popular_box_overflow_2"></div>
+                <div class="main_popular_box_route">Каунас - Минск</div>
+                <div class="main_popular_box_price">120 BYN</div>
+                <div class="button main_popular_box_button">Подробнее</div>
+              </a>
             </div>
 
             <div class="main_popular_box box_1 slider__item">
-              <img src="source/img/shauljaj_2.jpg">
-              <div class="main_popular_box_overflow"></div>
-              <div class="main_popular_box_overflow_2"></div>
-              <div class="main_popular_box_route">Минск - Шауляй</div>
-              <div class="main_popular_box_price">10 BYN</div>
-              <a class="button main_popular_box_button">Подробнее</a>
+              <a href="#">
+                <img src="source/img/shauljaj_2.jpg">
+                <div class="main_popular_box_overflow"></div>
+                <div class="main_popular_box_overflow_2"></div>
+                <div class="main_popular_box_route">Минск - Шауляй</div>
+                <div class="main_popular_box_price">10 BYN</div>
+                <div class="button main_popular_box_button">Подробнее</div>
+              </a>
             </div>
  
             
@@ -299,7 +316,7 @@
               Код 305718819 <br>
               Юридический адрес:<br>
               Ю. Савицкио ул. 4, Вильнюс<p>
-            <p>baltbus@inbox.lt</p>
+            <a href="mailto:baltbus@inbox.lt">baltbus@inbox.lt</a>
             <p class="footer_mobile_hide">© 2021</p>
           </div>
           <div class="footer_box footer_mobile_hide">
@@ -326,8 +343,8 @@
           </div>
           <div class="footer_box">
             <div class="footer_phones">
-              <a href="#">+ 370 641 27991 <img src="source/img/footer_viber.svg"></a>
-              <a href="#">+ 375 (29) 345-52-51 <img src="source/img/footer_viber.svg"></a>
+              <a href="tel:+37064127991">+ 370 641 27991 <img src="source/img/footer_viber.svg"></a>
+              <a href="tel:+375293455251">+ 375 (29) 345-52-51 <img src="source/img/footer_viber.svg"></a>
             </div>
           </div>
         </div>
@@ -338,6 +355,7 @@
 
   <!--Подключаем Jquery-->
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <!--Подключаем Slick slider-->
   <script src='js/slick.min.js'></script> 

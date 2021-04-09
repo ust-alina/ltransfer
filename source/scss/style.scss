@@ -192,7 +192,7 @@ body {
 
   .header_phone {
     @extend %flex_container; 
-    a {
+    a:first-child {
       @extend %flex_container; 
       width: 174px;
       height: 34px;
@@ -355,7 +355,7 @@ body {
   text-align: center;
   h1 {
     font-weight: 500;
-    font-size: 64px;
+    font-size: 56px;
     line-height: 122.8%;
     color: #fff;
     margin-bottom: 66px;
@@ -491,8 +491,33 @@ body {
 
 }
 
+.search_hide_field {
+  display: none;
+  position: relative;
+}
 
+.search_hide_field.show {
+  display: block;
+}
 
+.checked_field.hide {
+  display: none;
+}
+
+.close_return_date {
+  border-radius: 50%;
+  background: #1969D2;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  display: block;
+  text-align: center;
+  line-height: 20px;
+  position: absolute;
+  right: 0;
+  top: -8px;
+  cursor: pointer;
+}
 
 .main_banner_search_form_button {
   margin-top: 40px;
@@ -506,7 +531,6 @@ body {
 
 .button {
   background: #1969D2;
-  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   color: #fff;
   padding: 20px 50px;
@@ -531,7 +555,7 @@ body {
 .main_title {
   width: 100%;
   font-weight: bold;
-  font-size: 48px;
+  font-size: 40px;
   line-height: 122.8%;
   margin: 54px 0;
   text-align: center;
@@ -907,6 +931,8 @@ body {
   @extend %flex_container; 
   input[type="tel"] {
     max-width: 350px;
+    min-height: 58px;
+    display: block;
     width: 100%;
     padding: 20.5px 0 20.5px 30px;
     background: #EFF9FF;
@@ -925,7 +951,8 @@ body {
   }
   button {
     border-radius: 0px 5px 5px 0px;
-    padding: 18px 35px;
+    padding: 17.5px 35px;
+    min-height: 58px;
     font-weight: 500;
     font-size: 18px;
     line-height: 122.8%;
@@ -1002,6 +1029,12 @@ body {
     font-size: 18px;
     line-height: 140%;
     margin-top: 22px;
+    a {
+      color: #84A6BA;
+      &:hover {
+        color: #181818;
+      }
+    }
     @media(max-width: 480px){
       font-size: 10px;
       margin-top: 5px;
@@ -1017,6 +1050,9 @@ body {
     }
     a {
       color: #84A6BA;
+      &:hover {
+        color: #181818;
+      }
     }
   }
 }
@@ -1029,6 +1065,9 @@ body {
     font-size: 16px;
     line-height: 122.8%;
     color: #84A6BA;
+    &:hover {
+      color: #181818;
+    }
     @media(max-width: 480px){
       font-size: 10px;
     }
@@ -1049,3 +1088,115 @@ body {
 
 
 
+/*----Календарь---*/
+
+.ui-datepicker {
+  background: #EFF9FF;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 264px;
+  
+
+.ui-corner-all {
+  background: #1969D2;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+  position: relative;
+  .ui-datepicker-prev {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    font-size: 0;
+    background-image: url('../source/img/date_icon_left.png');
+    background-repeat: no-repeat;
+    background-position: 4px;
+    background-size: 14px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    &.ui-state-disabled {
+      background-color: #84A6BA;
+    }
+}
+.ui-datepicker-next {
+  position: absolute;
+    right: 8px;
+    top: 8px;
+    font-size: 0;
+    background-image: url('../source/img/date_icon_right.png');
+    background-repeat: no-repeat;
+    background-position: 6px;
+    background-size: 14px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    &.ui-state-disabled {
+      background-color: #84A6BA;
+    }
+}
+
+}
+.ui-datepicker-title {
+  padding: 10px 0;
+  font-size: 18px;
+}
+}
+
+.ui-datepicker-calendar tbody {
+  width: 100%;
+  tr{
+    display: flex;
+    justify-content: space-between;
+    td{
+    flex: 1 1 0%;
+    height: 32px;
+    padding: 0px;
+    font-size: 14px;
+    line-height: 32px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    outline: none;
+    &:not(.ui-state-disabled) {
+      &:hover {
+        background: #1969D2;
+        color: #fff;
+        border-radius: 2px;
+      }
+      &:hover .ui-state-default{
+        color: #fff;
+      }
+    }
+    
+    }
+  }
+}
+
+.ui-datepicker-calendar {
+  padding: 10px;
+  width: 100%;
+  thead {
+  display: flex;
+  margin-top: 1em;
+    tr {
+      display: flex;
+      justify-content: space-between;
+       width: 100%;
+    }
+  }
+}
+
+
+.ui-state-disabled .ui-state-default{
+  color: #84A6BA;
+}
+
+.ui-state-default{
+  color: #181818;
+}

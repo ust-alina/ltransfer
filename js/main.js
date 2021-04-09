@@ -32,6 +32,25 @@ $(document).ready(function(){
                   $('body').toggleClass('fixed-page');
             });
 
+
+            /*-----Включение Даты обратной поездки------*/
+$('#return').click(function(){
+      if ($(this).is(':checked')){
+            $('.search_hide_field').addClass('show');
+            $('.checked_field').addClass('hide');
+      } else {
+            $('.search_hide_field').removeClass('show');
+            $('.checked_field').removeClass('hide');
+      }
+      });
+
+      $('.close_return_date').click(function(){
+            $('.search_hide_field').removeClass('show');
+            $('.checked_field').removeClass('hide');
+            $('#return').prop('checked', false);
+
+      });
+      
            
 
 });
@@ -49,4 +68,5 @@ $(document).ready(function(){
       }  else {
       $(".popular_slider").slick("unslick");
       }
+
 });
