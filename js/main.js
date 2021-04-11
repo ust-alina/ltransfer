@@ -70,9 +70,26 @@ $('#return').click(function(){
       }  else {
       $(".popular_slider").slick("unslick");
       }
+   
+       /*-----Форма странца маршрутов------*/
+      
+      /*-----Включение Даты обратной поездки------*/
+$('#page_return').click(function(){
+      if ($(this).is(':checked')){
+            $('.page_search_hide_field').addClass('show');
+            $('.page_checked_field').addClass('hide');
+      } else {
+            $('.page_search_hide_field').removeClass('show');
+            $('.page_checked_field').removeClass('hide');
+      }
+      });
 
-      
-      
+      $('.page_close_return_date').click(function(){
+            $('.page_search_hide_field').removeClass('show');
+            $('.page_checked_field').removeClass('hide');
+            $('#page_return').prop('checked', false);
+
+      });
 
 });
 

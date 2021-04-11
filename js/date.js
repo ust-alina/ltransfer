@@ -24,4 +24,10 @@ $("#datepicker").datepicker({
 $("#datepicker_return").datepicker({
     minDate: 0,
 });
+$("#page_datepicker").datepicker({
+    minDate: 0,
+});
+$("#page_datepicker_return").datepicker({
+    minDate: 0,
+});
 });
