@@ -100,6 +100,24 @@ $('#page_return').click(function(){
 		$(this).next().toggleClass('toggle_menu_active');
 	});
 
+       /*--МЕНЮ САЙДБАРА В МОБИЛЬНОЙ ВЕРСИИ--*/
+
+       $('.sidebar-menu-switch').on('click', function() {
+		$(this).toggleClass('open');
+		$('.sidebar_menu').toggleClass('open');
+	});
+
+
+      var nav = $('.sidebar');
+ 
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 50) {
+			nav.addClass("fixed");
+		} else {
+			nav.removeClass("fixed");
+		}
+	});
+
 });
 
 
