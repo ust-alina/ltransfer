@@ -1851,12 +1851,12 @@ ol li:before {
   font-size: 22px;
   line-height: 122.8%;
   cursor: pointer;
-  /*&:hover {
-    //background: #3d7aca;
-  }
-  &:active {
-    //background: #3d7aca;
-  }*/
+}
+.white_button:hover {
+  color: #1969D2;
+}
+.white_button:active {
+  color: #1969D2;
 }
 @media (max-width: 768px) {
   .white_button {

@@ -1705,12 +1705,12 @@ input[type="checkbox"]:checked + .page_return_checkbox_label:before {
   font-size: 22px;
   line-height: 122.8%;
   cursor: pointer;
-  /*&:hover {
-    //background: #3d7aca;
+  &:hover {
+    color:#1969D2; 
   }
   &:active {
-    //background: #3d7aca;
-  }*/
+    color:#1969D2; 
+  }
   @media(max-width: 768px){
     font-size: 20px;
     padding: 10px 20px;
