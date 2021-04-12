@@ -1335,10 +1335,15 @@ body {
   }
 }
 
+/*------*/
+
 .marshruty_container {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  .main_title {
+    text-align: left;
+  }
 }
 
 .marshruty_left_block {
