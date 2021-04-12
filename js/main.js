@@ -107,14 +107,13 @@ $('#page_return').click(function(){
 		$('.sidebar_menu').toggleClass('open');
 	});
 
-
-      var nav = $('.sidebar');
+      /*--ФИКСИРОВАНИЕ МЕНЮ САЙДБАРА В МОБИЛЬНОЙ ВЕРСИИ--*/
  
 	$(window).scroll(function () {
 		if ($(this).scrollTop() > 50) {
-			nav.addClass("fixed");
+			$('.sidebar').addClass("fixed");
 		} else {
-			nav.removeClass("fixed");
+			$('.sidebar').removeClass("fixed");
 		}
 	});
 

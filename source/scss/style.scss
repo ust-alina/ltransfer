@@ -1895,6 +1895,35 @@ input[type="checkbox"]:checked + .page_return_checkbox_label:before {
   }
 }
 
+
+.sidebar-menu-switch {
+  position: absolute;
+  right: 50%;
+  display: none;
+  width: 50px;
+  height: 25px;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: radial-gradient(ellipse at 50% 0%, #fff 69%, transparent 70%);
+  color: #777;
+  cursor: pointer;
+  -webkit-filter: drop-shadow(1px 2px 1px rgba(46,46,46,0.21));
+  filter: drop-shadow(1px 2px 1px rgba(46,46,46,0.21));
+  transform: translateX(50%);
+  svg {
+    transform: rotate(180deg);
+  }
+  &.open {
+    svg {
+      transform: none;
+    }
+  }
+  @media  (max-width: 768px) {
+    display: flex;
+  }
+}
+
 /*--Выпадающее при нажатии меню--*/
 
 .toggle_menu {
@@ -1982,32 +2011,4 @@ input[type="checkbox"]:checked + .page_return_checkbox_label:before {
       background: #84A6BA;
   }
 
-}
-
-.sidebar-menu-switch {
-    position: absolute;
-    right: 50%;
-    display: none;
-    width: 50px;
-    height: 25px;
-    justify-content: center;
-    padding: 0;
-    border: none;
-    background: radial-gradient(ellipse at 50% 0%, #fff 69%, transparent 70%);
-    color: #777;
-    cursor: pointer;
-    -webkit-filter: drop-shadow(1px 2px 1px rgba(46,46,46,0.21));
-    filter: drop-shadow(1px 2px 1px rgba(46,46,46,0.21));
-    transform: translateX(50%);
-    svg {
-      transform: rotate(180deg);
-    }
-    &.open {
-      svg {
-        transform: none;
-      }
-    }
-    @media  (max-width: 768px) {
-      display: flex;
-    }
 }
