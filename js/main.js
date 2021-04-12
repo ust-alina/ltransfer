@@ -2,9 +2,9 @@ $(document).ready(function(){
 
       /*----Выбор языка-----*/
 
-    $('.language_select').click(function(){
+    $('.language_select_block').click(function(){
+        $('.language_select').toggleClass('open');
         $(this).toggleClass('open');
-        $('.language_select_block').toggleClass('open');
         })
         
         $('.language_select li').click(function(){
@@ -14,9 +14,9 @@ $(document).ready(function(){
       
         /*----Выбор валюты-----*/
 
-        $('.currency_select').click(function(){
+        $('.currency_select_block').click(function(){
             $(this).toggleClass('open');
-            $('.currency_select_block').toggleClass('open');
+            $('.currency_select').toggleClass('open');
             })
             
             $('.currency_select li').click(function(){

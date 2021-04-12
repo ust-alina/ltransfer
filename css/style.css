@@ -297,7 +297,6 @@ body {
   text-transform: uppercase;
   height: 32px;
   overflow: hidden;
-  cursor: pointer;
   background: #fff;
 }
 
@@ -335,6 +334,9 @@ body {
   z-index: 10;
 }
 
+.language_select_block, .currency_select_block {
+  cursor: pointer;
+}
 .language_select_block svg, .currency_select_block svg {
   margin-bottom: 5px;
 }
