@@ -91,12 +91,25 @@
       <!--ХЛЕБНЫЕ КРОШКИ-->
      <div class="breadcrumbs">
        <div class="wrapper">
-         <ul>
-           <li><a href="#">Заказать трансфер</a></li>
+         <ul itemscope itemtype="https://schema.org/BreadcrumbList">
+           <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="#" title="Заказать трансфер" itemprop="item">
+              <span itemprop="name">Заказать трансфер</span>
+              <meta itemprop="position" content="0"> <!--Должно считать номер позиции хлебных крошек начиная с 0-->
+            </a>
+          </li>
            <li>></li>
-           <li><a href="#">Маршруты</a></li>
+           <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="#" title="Маршруты" itemprop="item">
+              <span itemprop="name">Маршруты</span>
+              <meta itemprop="position" content="1">
+            </a>
+          </li>
            <li>></li>
-           <li>Вильнюс-Минск</li>
+           <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <span itemprop="name">Вильнюс-Минск</span>
+            <meta itemprop="position" content="2">
+          </li>
          </ul>
        </div>
      </div>
@@ -106,14 +119,17 @@
        <div class="marshruty_container">
          <div class="marshruty_left_block">
            <!---БЛОК ВЫВОДИТСЯ ПОЛНОСТЬЮ ИЗ ТЕКСТОВОГО РЕДАКТОРА 1 -->
-          <div class="marshruty_left_text-block_1">
-              <div class="page_title"><h1>Вильнюс-Минск</h1></div>
+          <div class="marshruty_left_text-block_1" itemscope itemtype="https://schema.org/Product">
+              <div class="page_title"><h1 itemprop="name">Вильнюс-Минск</h1></div>
        
-              <p>Компания lTransfer предлагает недорогие трансферы в аэропорт Вильнюс из Минска на комфортабельном маршрутном такси. Маршрутка считается одним из наиболее удобных способов добраться до аэропорта литовской столицы. К тому же наша логистическая служба составляет расписание маршрутов, подстраивая их под наиболее востребованные авиарейсы. В зависимости от загруженности трассы и пункта таможенного контроля на дорогу тратится около двух–двух с половиной часов. Чаще всего трансфер Минск – Вильнюс (Аэропорт) заказывают белорусские, российские и украинские туристы, люди, которые работают в Литве, любители европейского шопинга, студенты, желающие получить диплом о высшем образовании в Европе.</p>
+              <p itemprop="description">Компания lTransfer предлагает недорогие трансферы в аэропорт Вильнюс из Минска на комфортабельном маршрутном такси. Маршрутка считается одним из наиболее удобных способов добраться до аэропорта литовской столицы. К тому же наша логистическая служба составляет расписание маршрутов, подстраивая их под наиболее востребованные авиарейсы. В зависимости от загруженности трассы и пункта таможенного контроля на дорогу тратится около двух–двух с половиной часов. Чаще всего трансфер Минск – Вильнюс (Аэропорт) заказывают белорусские, российские и украинские туристы, люди, которые работают в Литве, любители европейского шопинга, студенты, желающие получить диплом о высшем образовании в Европе.</p>
               <br>
               <h2>Цена билета Вильнюс-Минск:</h2>
               <br>
-              <div class="price"><span>10,00 €</span></div>
+              <div class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <meta itemprop="priceCurrency" content="EUR" />
+                <span itemprop="price" content="10.00">10,00</span> <span>€</span>
+              </div>
           </div>
           <!--Таблицы выводятся кодом, нужно что бы время подтягивалось автоматически--->
            <div class="routs_tables">
