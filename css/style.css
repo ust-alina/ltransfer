@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
-.page_search_form_button, .route_time_table td:first-child, .main_help_container, .main_popular_link, .main_why_box, .container, .main_banner_search_form_button, .field_container, .main_banner_search_form, .header_select, .header_phone a:first-child, .header_phone, .header_navbar ul, .header_center_block, .header {
+.page_search_form_button, .route_time_table td:first-child, .help_container, .main_popular_link, .why_box, .container, .main_banner_search_form_button, .field_container, .main_banner_search_form, .header_select, .header_phone a:first-child, .header_phone, .header_navbar ul, .header_center_block, .header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -811,24 +811,24 @@ body {
   }
 }
 
-.main_why_box {
+.why_box {
   justify-content: space-between;
   padding: 20px 18px 54px 30px;
 }
 @media (max-width: 768px) {
-  .main_why_box {
+  .why_box {
     padding: 20px 12px 50px 24px;
   }
 }
 
-.main_why_box_img {
+.why_box_img {
   background: linear-gradient(90deg, #1969D2 0%, #0CDBFF 99.99%, #A6FAFF 100%);
   border-radius: 50%;
   width: 40px;
   height: 40px;
   position: relative;
 }
-.main_why_box_img img {
+.why_box_img img {
   width: 40px;
   height: 40px;
   position: absolute;
@@ -836,19 +836,19 @@ body {
   bottom: -3px;
 }
 @media (max-width: 768px) {
-  .main_why_box_img img {
+  .why_box_img img {
     width: 32px;
     height: 32px;
   }
 }
 @media (max-width: 768px) {
-  .main_why_box_img {
+  .why_box_img {
     width: 32px;
     height: 32px;
   }
 }
 
-.main_why_box_number {
+.why_box_number {
   font-weight: 500;
   font-size: 62.8966px;
   line-height: 122.8%;
@@ -856,22 +856,22 @@ body {
   opacity: 0.2;
 }
 @media (max-width: 768px) {
-  .main_why_box_number {
+  .why_box_number {
     font-size: 50px;
   }
 }
 
-.main_why_box_text {
+.why_box_text {
   width: 100%;
   margin-top: 13px;
 }
-.main_why_box_text p {
+.why_box_text p {
   font-weight: 500;
   font-size: 20px;
   line-height: 122.8%;
 }
 @media (max-width: 768px) {
-  .main_why_box_text {
+  .why_box_text {
     font-size: 18px;
   }
 }
@@ -967,7 +967,7 @@ body {
   }
 }
 
-.main_popular_box_overflow {
+.box_1_overflow {
   position: absolute;
   top: 0;
   z-index: 2;
@@ -978,17 +978,17 @@ body {
   border-radius: 5px;
 }
 @media (max-width: 768px) {
-  .main_popular_box_overflow {
+  .box_1_overflow {
     height: 220px;
   }
 }
 @media (max-width: 480px) {
-  .main_popular_box_overflow {
+  .box_1_overflow {
     height: 171px;
   }
 }
 
-.main_popular_box_overflow_2 {
+.box_1_overflow_2 {
   position: absolute;
   top: 0;
   z-index: 2;
@@ -999,17 +999,17 @@ body {
   border-radius: 5px;
 }
 @media (max-width: 768px) {
-  .main_popular_box_overflow_2 {
+  .box_1_overflow_2 {
     height: 220px;
   }
 }
 @media (max-width: 480px) {
-  .main_popular_box_overflow_2 {
+  .box_1_overflow_2 {
     height: 171px;
   }
 }
 
-.main_popular_box_route {
+.box_1_route {
   position: relative;
   z-index: 3;
   font-weight: 500;
@@ -1019,18 +1019,18 @@ body {
   padding: 30px 0 0 30px;
 }
 @media (max-width: 768px) {
-  .main_popular_box_route {
+  .box_1_route {
     font-size: 28px;
   }
 }
 @media (max-width: 480px) {
-  .main_popular_box_route {
+  .box_1_route {
     font-size: 24px;
     padding: 22px 0 0 22px;
   }
 }
 
-.main_popular_box_price {
+.box_1_price {
   position: relative;
   z-index: 3;
   font-weight: 500;
@@ -1041,13 +1041,13 @@ body {
   padding-left: 30px;
 }
 @media (max-width: 480px) {
-  .main_popular_box_price {
+  .box_1_price {
     font-size: 14px;
     padding-left: 22px;
   }
 }
 
-.main_popular_box_button {
+.box_1_button {
   position: absolute;
   z-index: 3;
   padding: 12px 45px;
@@ -1060,7 +1060,7 @@ body {
   box-shadow: none;
 }
 @media (max-width: 480px) {
-  .main_popular_box_button {
+  .box_1_button {
     width: auto;
     padding: 9px 32px;
   }
@@ -1137,7 +1137,7 @@ body {
 }
 
 /*------Форма нужна наша помощь?------*/
-.main_help_container {
+.help_container {
   height: 236px;
   max-width: 918px;
   background: url("../source/img/Rectangle_form.jpg");
@@ -1150,14 +1150,14 @@ body {
   margin-bottom: 98px;
 }
 @media (max-width: 480px) {
-  .main_help_container {
+  .help_container {
     max-width: 320px;
     height: 128px;
     margin-bottom: 52px;
   }
 }
 
-.main_help_container_overflow {
+.help_container_overflow {
   position: absolute;
   height: 236px;
   width: 100%;
@@ -1168,23 +1168,23 @@ body {
   border-radius: 5px;
 }
 @media (max-width: 480px) {
-  .main_help_container_overflow {
+  .help_container_overflow {
     height: 128px;
   }
 }
 
-.main_help_box {
+.help_box {
   position: relative;
   z-index: 2;
   width: 56%;
 }
-@media (max-width: 480px) {
-  .main_help_box {
+@media (max-width: 768px) {
+  .help_box {
     width: 100%;
   }
 }
 
-.main_help_text {
+.help_text {
   font-size: 24px;
   line-height: 122.8%;
   text-align: center;
@@ -1192,12 +1192,12 @@ body {
   margin-bottom: 30px;
 }
 @media (max-width: 768px) {
-  .main_help_text {
+  .help_text {
     font-size: 20px;
   }
 }
 @media (max-width: 480px) {
-  .main_help_text {
+  .help_text {
     font-size: 14px;
   }
 }
@@ -1206,6 +1206,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 .help_callback-form_row input[type=tel] {
   max-width: 350px;
@@ -1477,7 +1478,6 @@ body {
 @media (max-width: 480px) {
   .marshruty_left_block {
     width: 100%;
-    order: 2;
   }
 }
 
@@ -1494,7 +1494,6 @@ body {
 @media (max-width: 480px) {
   .marshruty_right_block {
     width: 100%;
-    order: 1;
   }
 }
 
@@ -1595,12 +1594,28 @@ p {
   }
 }
 
+/*-----БЛОК С ТАБЛИЦАМИ-----*/
+.routs_tables {
+  margin-bottom: 54px;
+}
+.routs_tables h3 {
+  margin: 54px 0;
+}
+
 .route_time_table {
   width: 100%;
   overflow: auto;
+  border-collapse: collapse;
+  margin-bottom: 14px;
 }
-.route_time_table tr {
+.route_time_table thead tr {
   border-bottom: 3px solid #DDDDDD;
+}
+.route_time_table tbody tr {
+  border-bottom: 3px solid #DDDDDD;
+}
+.route_time_table tbody tr:last-child {
+  border: none;
 }
 .route_time_table td:nth-child(2n) {
   background: #F5F5F5;
@@ -1639,7 +1654,11 @@ p {
   margin: 0 auto;
   display: flex;
 }
+.route_time_table td svg {
+  margin: 0 4px;
+}
 
+/*---СПИСОК---*/
 ol {
   counter-reset: item;
 }

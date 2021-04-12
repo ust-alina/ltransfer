@@ -744,7 +744,7 @@ body {
   }
 }
 
-.main_why_box {
+.why_box {
   @extend %flex_container; 
   justify-content: space-between;
   padding: 20px 18px 54px 30px;
@@ -753,7 +753,7 @@ body {
   }
 }
 
-.main_why_box_img {
+.why_box_img {
   background: linear-gradient(90deg, #1969D2 0%, #0CDBFF 99.99%, #A6FAFF 100%);
   border-radius: 50%;
   width: 40px;
@@ -776,7 +776,7 @@ body {
   }
 }
 
-.main_why_box_number {
+.why_box_number {
   font-weight: 500;
   font-size: 62.8966px;
   line-height: 122.8%;
@@ -787,7 +787,7 @@ body {
   }
 }
 
-.main_why_box_text {
+.why_box_text {
   width: 100%;
   margin-top: 13px;
   p {
@@ -886,7 +886,7 @@ body {
   }
 }
 
-.main_popular_box_overflow {
+.box_1_overflow {
   position: absolute;
   top: 0;
   z-index: 2;
@@ -903,7 +903,7 @@ body {
   }
 }
 
-.main_popular_box_overflow_2 {
+.box_1_overflow_2 {
   position: absolute;
   top: 0;
   z-index: 2;
@@ -920,7 +920,7 @@ body {
   }
 }
 
-.main_popular_box_route {
+.box_1_route {
   position: relative;
   z-index:3;
   font-weight: 500;
@@ -937,7 +937,7 @@ body {
   }
 }
 
-.main_popular_box_price {
+.box_1_price {
   position: relative;
   z-index:3;
   font-weight: 500;
@@ -952,7 +952,7 @@ body {
   }
 }
 
-.main_popular_box_button {
+.box_1_button {
   position: absolute;
   z-index:3;
   padding: 12px 45px;
@@ -1047,7 +1047,7 @@ body {
 
 /*------Форма нужна наша помощь?------*/
 
-.main_help_container {
+.help_container {
   height: 236px;
   max-width: 918px;
   background: url('../source/img/Rectangle_form.jpg');
@@ -1067,7 +1067,7 @@ body {
   
 }
 
-.main_help_container_overflow {
+.help_container_overflow {
   position: absolute;
   height: 236px;
   width: 100%;
@@ -1081,16 +1081,16 @@ body {
   }
 }
 
-.main_help_box {
+.help_box {
   position: relative;
   z-index: 2;
   width: 56%;
-  @media(max-width: 480px){
+  @media(max-width: 768px){
     width: 100%;
   }
 }
 
-.main_help_text {
+.help_text {
   font-size: 24px;
   line-height: 122.8%;
   text-align: center;
@@ -1108,6 +1108,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   input[type="tel"] {
     max-width: 350px;
     min-height: 58px;
@@ -1353,7 +1354,6 @@ body {
   }
   @media(max-width: 480px){
     width: 100%;
-    order: 2;
   }
 }
 
@@ -1366,7 +1366,6 @@ body {
   }
   @media(max-width: 480px){
     width: 100%;
-    order:1;
   }
 }
 
@@ -1450,13 +1449,36 @@ p {
   }
 }
 
+/*-----БЛОК С ТАБЛИЦАМИ-----*/
+
+.routs_tables {
+  h3 {
+    margin: 54px 0;
+  }
+  margin-bottom: 54px;
+}
+
 
 .route_time_table {
   width: 100%;
   overflow: auto;
-  tr {
-    border-bottom: 3px solid #DDDDDD;
+  border-collapse: collapse;
+  margin-bottom: 14px;
+  thead {
+    tr {
+      border-bottom: 3px solid #DDDDDD;
+    }
   }
+
+  tbody {
+    tr {
+      border-bottom: 3px solid #DDDDDD;
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+
   td:nth-child(2n){
     background: #F5F5F5;
   }
@@ -1480,6 +1502,7 @@ p {
     font-weight: 500;
     font-size: 20px;
     line-height: 122.8%;
+    
     @media(max-width: 480px){
       font-size:16px;
     }
@@ -1490,8 +1513,13 @@ p {
       margin: 0 auto;
       display: flex;
     }
+    svg {
+      margin: 0 4px;
+    }
   }
 }
+
+/*---СПИСОК---*/
 
 ol { 
   counter-reset: item; 
