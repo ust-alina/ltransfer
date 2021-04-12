@@ -91,6 +91,15 @@ $('#page_return').click(function(){
 
       });
 
+      /*--МЕНЮ АККОРДИОН НА ИНФОРМАЦИОННОЙ СТРАНИЦЕ--*/
+
+      $('.toggle_menu_title').on('click', function() {
+		$('.toggle_menu_title').not(this).removeClass('toggle_menu_active')
+		  .not(this).next().removeClass('toggle_menu_active');
+		$(this).toggleClass('toggle_menu_active');
+		$(this).next().toggleClass('toggle_menu_active');
+	});
+
 });
 
 
