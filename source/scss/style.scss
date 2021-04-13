@@ -1320,14 +1320,14 @@ body {
     display: flex;
     align-items: center;
     li {
-      font-weight: 500;
+      font-weight: 400;
       font-size: 12px;
       line-height: 122.8%;
       color: #84A6BA;
       margin-right: 11px;
       a {
         color: #84A6BA;
-        font-weight: 500;
+        font-weight: 400;
         font-size: 12px;
         line-height: 122.8%;
       }
@@ -2025,12 +2025,15 @@ input[type="checkbox"]:checked + .page_return_checkbox_label:before {
 .buy_route {
   .buy_route_button {
     display: none;
+    @media  (max-width: 768px) {
+      display: block;
+    }
   }
   &:hover {
     .box_1 {
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
-    margin-top: -26px;
+    margin: -15px -10px  0 -10px;
     padding: 10px;
     box-shadow: 0px 5px 15px rgba(10, 34, 96, 0.07);
     border-radius: 5px;
@@ -2042,6 +2045,29 @@ input[type="checkbox"]:checked + .page_return_checkbox_label:before {
       display: block;
       max-width: 200px;
       padding: 8px 16px;
+      font-weight: 500;
+      font-size: 18px;
+       line-height: 122.8%;
+      text-align: center;
+    }
+  }
+
+  @media  (max-width: 768px) {
+    .box_1 {
+      margin-bottom: 10px;
+    }
+    padding: 10px;
+    box-shadow: 0px 5px 15px rgba(10, 34, 96, 0.07);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    .buy_route_button {
+      display: block;
+      max-width: 200px;
+      padding: 10px 18px;
       font-weight: 500;
       font-size: 18px;
        line-height: 122.8%;
