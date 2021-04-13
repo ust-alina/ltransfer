@@ -2170,3 +2170,37 @@ ol li:before {
 .toggle_menu_active span:before {
   background: #84A6BA;
 }
+
+/*-------ВСЕ МАРШРУТЫ----------*/
+.vse_marshruty {
+  margin-top: 40px;
+}
+.vse_marshruty .page_title {
+  text-align: center;
+}
+
+.buy_route .buy_route_button {
+  display: none;
+}
+.buy_route:hover {
+  margin-top: -26px;
+  padding: 10px;
+  box-shadow: 0px 5px 15px rgba(10, 34, 96, 0.07);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.buy_route:hover .box_1 {
+  margin-bottom: 10px;
+}
+.buy_route:hover .buy_route_button {
+  display: block;
+  max-width: 200px;
+  padding: 8px 16px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 122.8%;
+  text-align: center;
+}
