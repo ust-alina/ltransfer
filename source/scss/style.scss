@@ -2023,6 +2023,24 @@ input[type="checkbox"]:checked + .page_return_checkbox_label:before {
 }
 
 .buy_route {
+  .box_1 {
+    width: 340px;
+    height: 210px;
+  }
+  .box_1_overflow {
+    height: 210px;
+  }
+  .box_1_overflow_2 {
+    height: 210px;
+  }
+  .box_1_route {
+    padding: 20px 0 0 20px;
+    font-size: 30px;
+  }
+  
+  .box_1_price {
+    padding-left: 20px;
+  }
   .buy_route_button {
     display: none;
     @media  (max-width: 768px) {
