@@ -1202,9 +1202,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  @media(max-width: 480px){
-    align-items: center;
-  }
 }
 
 .footer_brand {
@@ -1281,6 +1278,8 @@ body {
 
 .footer_phones {
   text-align: right;
+  display: flex;
+  flex-direction: column;
   a {
     display: block;
     font-weight: bold;
@@ -1311,6 +1310,11 @@ body {
   }
   .footer_button {
     color: #fff;
+    
+    @media(max-width: 480px){
+      padding: 10px 20px;
+      order: 3;
+    }
     
     &:hover {
       color: #fff;
