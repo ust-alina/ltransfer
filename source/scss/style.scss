@@ -402,6 +402,17 @@ body {
   
 }
 
+.button_swap {
+  background: transparent;
+  margin: 0 -12px;
+  svg {
+    fill:#84A6BA;
+  }
+  @media(max-width: 768px){
+    display: none;
+  }
+}
+
 .main_banner_search_form {
   @extend %flex_container; 
   justify-content: space-around;
@@ -1276,20 +1287,16 @@ body {
     font-size: 16px;
     line-height: 122.8%;
     color: #84A6BA;
+    margin-bottom: 30px;
     &:hover {
       color: #181818;
     }
     @media(max-width: 768px){
       font-size: 12px;
+      margin-bottom: 10px;
     }
     @media(max-width: 480px){
       font-size: 10px;
-    }
-    &:first-child {
-      margin-bottom: 30px;
-      @media(max-width: 768px){
-        margin-bottom: 10px;
-      }
     }
     img {
       @media(max-width: 768px){
@@ -1302,7 +1309,15 @@ body {
       }
     }
   }
+  .footer_button {
+    color: #fff;
+    
+    &:hover {
+      color: #fff;
+    }
+  }
 }
+
 
 
 

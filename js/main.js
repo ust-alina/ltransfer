@@ -52,7 +52,12 @@ $('#return').click(function(){
       });
 
  
-      
+      $('.button_swap').click(function () {
+            var v1 = $('#from').val(),
+                v2 = $('#to').val();
+            $('#from').val(v2);
+            $('#to').val(v1);
+        });
            
 
 });

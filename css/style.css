@@ -461,6 +461,19 @@ body {
   z-index: 2;
 }
 
+.button_swap {
+  background: transparent;
+  margin: 0 -12px;
+}
+.button_swap svg {
+  fill: #84A6BA;
+}
+@media (max-width: 768px) {
+  .button_swap {
+    display: none;
+  }
+}
+
 .main_banner_search_form {
   justify-content: space-around;
   width: 100%;
@@ -1393,6 +1406,7 @@ body {
   font-size: 16px;
   line-height: 122.8%;
   color: #84A6BA;
+  margin-bottom: 30px;
 }
 .footer_phones a:hover {
   color: #181818;
@@ -1400,19 +1414,12 @@ body {
 @media (max-width: 768px) {
   .footer_phones a {
     font-size: 12px;
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 480px) {
   .footer_phones a {
     font-size: 10px;
-  }
-}
-.footer_phones a:first-child {
-  margin-bottom: 30px;
-}
-@media (max-width: 768px) {
-  .footer_phones a:first-child {
-    margin-bottom: 10px;
   }
 }
 @media (max-width: 768px) {
@@ -1426,6 +1433,12 @@ body {
     width: 11.96px;
     height: 12.09px;
   }
+}
+.footer_phones .footer_button {
+  color: #fff;
+}
+.footer_phones .footer_button:hover {
+  color: #fff;
 }
 
 /*-------СТРАНИЦА МАРШРУТЫ-------*/

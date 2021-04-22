@@ -103,7 +103,7 @@
           <div class="main_banner_search_form">
             <div class="search_form_field">
               <div class="field_container">
-                <input placeholder="Поеду из" value="" name="from" list="from_city">
+                <input placeholder="Поеду из" value="" name="from" list="from_city" id="from">
                 <datalist id="from_city">
                   <option value="Вильнюс"></option>
                   <option value="Каунас"></option>
@@ -111,10 +111,14 @@
                  </datalist>
               </div>
             </div>
-  
+            
+            <button type="button" tabindex="-1" class="button_swap">
+              <svg width="1em" height="1em" viewBox="0 0 459 459" fill="currentColor" class="icon icon-switch "><path d="M102 204L0 306l102 102v-76.5h178.5v-51H102V204zm357-51L357 51v76.5H178.5v51H357V255l102-102z"></path></svg>
+            </button>
+
             <div class="search_form_field">
               <div class="field_container">
-                <input placeholder="Поеду в" value="" name="to" list="to_city">
+                <input placeholder="Поеду в" value="" name="to" list="to_city" id="to">
                 <datalist id="to_city">
                   <option value="Вильнюс"></option>
                   <option value="Каунас"></option>
@@ -355,6 +359,7 @@
           </div>
           <div class="footer_box">
             <div class="footer_phones">
+              <a href="viber://chat?number=%2B37064127991" class="button footer_button">Заказать поездку через Viber</a>
               <a href="tel:+37064127991"><span itemprop="telephone">+ 370 641 27991 </span><img src="source/img/footer_viber.svg"></a>
               <a href="tel:+375293455251"><span itemprop="telephone">+ 375 (29) 345-52-51 </span><img src="source/img/footer_viber.svg"></a>
             </div>
