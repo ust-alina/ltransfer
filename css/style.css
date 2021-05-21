@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
-.page_search_form_button, .route_time_table td:first-child, .help_container, .main_popular_link, .why_box, .container, .main_banner_search_form_button, .field_container, .main_banner_search_form, .header_select, .header_phone a:first-child, .header_phone, .header_navbar ul, .header_center_block, .header {
+.vyvod_marshrutov_conatiner.net-reisov, .poisk_marshrutov_button, .vyvod_marshrutov_price_container, .vyvod_marshrutov_info_marshruty, .vyvod_marshrutov_info_marshruty_img, .vyvod_marshrutov_info_top, .vyvod_marshrutov_conatiner, .poisk_marshrutov_search_form .button_swap_container, .poisk_marshrutov_search_form .field_container, .poisk_marshrutov_search_form, .page_search_form_button, .route_time_table td:first-child, .help_container, .main_popular_link, .why_box, .container, .main_banner_search_form_button, .field_container, .main_banner_search_form, .header_select, .header_phone a:first-child, .header_phone, .header_navbar ul, .header_center_block, .header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2268,4 +2268,511 @@ ol li:before {
     line-height: 122.8%;
     text-align: center;
   }
+}
+
+/*---ФОРМА НА СТРАНИЦЕ МАРШРУТОВ----*/
+.poisk_marshrutov {
+  box-shadow: 0px 8px 24px rgba(1, 9, 84, 0.07);
+}
+
+.poisk_marshrutov_form_wrapper {
+  padding-top: 23px;
+  padding-bottom: 40px;
+}
+
+.main_banner_form {
+  position: relative;
+  z-index: 2;
+}
+
+.button_swap {
+  background: transparent;
+  margin: 0 -12px;
+}
+.button_swap svg {
+  fill: #84A6BA;
+}
+@media (max-width: 768px) {
+  .button_swap {
+    display: none;
+  }
+}
+
+.poisk_marshrutov_search_form {
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100%;
+}
+.poisk_marshrutov_search_form .field_container {
+  width: 220px;
+  height: 58px;
+  background: #EFF9FF;
+  border: 1px solid rgba(157, 202, 230, 0.2);
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+@media (max-width: 480px) {
+  .poisk_marshrutov_search_form .field_container {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .poisk_marshrutov_search_form .checked_field {
+    margin-top: 28px;
+  }
+  .poisk_marshrutov_search_form .checked_field .field_container {
+    justify-content: flex-start;
+  }
+}
+.poisk_marshrutov_search_form label {
+  margin-bottom: 10px;
+}
+.poisk_marshrutov_search_form .return_checkbox_label {
+  margin-bottom: 0px;
+}
+.poisk_marshrutov_search_form .button_swap_container {
+  height: 58px;
+}
+.poisk_marshrutov_search_form .search_form_field:first-child {
+  padding-left: 10px;
+}
+@media (max-width: 1200px) {
+  .poisk_marshrutov_search_form .search_form_field:first-child {
+    padding-left: 0px;
+  }
+}
+.poisk_marshrutov_search_form .search_form_field:last-child {
+  padding-right: 10px;
+}
+@media (max-width: 1200px) {
+  .poisk_marshrutov_search_form .search_form_field:last-child {
+    padding-right: 0px;
+  }
+}
+.poisk_marshrutov_search_form .poisk_marshrutov_search_form_button .button {
+  background: #1969D2;
+  border-radius: 5px;
+  color: #fff;
+  width: 197px;
+  height: 58px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 122.8%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.poisk_marshrutov_search_form .poisk_marshrutov_search_form_button .button:hover {
+  background: #3d7aca;
+}
+.poisk_marshrutov_search_form .poisk_marshrutov_search_form_button .button:active {
+  background: #3d7aca;
+}
+.poisk_marshrutov_search_form .poisk_marshrutov_search_form_button .button svg {
+  margin-right: 16px;
+}
+@media (max-width: 480px) {
+  .poisk_marshrutov_search_form .poisk_marshrutov_search_form_button {
+    margin-top: 28px;
+  }
+}
+@media (max-width: 1200px) {
+  .poisk_marshrutov_search_form .search_form_field {
+    width: 49%;
+  }
+}
+@media (max-width: 480px) {
+  .poisk_marshrutov_search_form .search_form_field {
+    width: 100%;
+  }
+}
+.poisk_marshrutov_search_form input {
+  background: transparent;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 122.8%;
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+}
+.poisk_marshrutov_search_form input::placeholder {
+  color: #84A6BA;
+}
+@media (max-width: 480px) {
+  .poisk_marshrutov_search_form input {
+    padding-left: 20px;
+  }
+}
+.poisk_marshrutov_search_form label {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 122.8%;
+  color: #84A6BA;
+}
+.poisk_marshrutov_search_form input[type=checkbox] {
+  display: none;
+}
+.poisk_marshrutov_search_form .return_checkbox_label:before {
+  cursor: pointer;
+  content: " ";
+  color: #84A6BA;
+  display: inline-block;
+  margin-right: 7px;
+  position: relative;
+  text-align: center;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  vertical-align: middle;
+  border: 1px solid #84A6BA;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 12px;
+  margin-bottom: 2px;
+}
+@media (max-width: 480px) {
+  .poisk_marshrutov_search_form .return_checkbox_label:before {
+    margin-left: 20px;
+  }
+}
+.poisk_marshrutov_search_form input[type=checkbox]:checked + .return_checkbox_label:before {
+  content: "";
+  font-family: "icomoon";
+  font-weight: 600;
+}
+
+.search_hide_field {
+  display: none;
+  position: relative;
+}
+
+.search_hide_field.show {
+  display: block;
+}
+
+.checked_field.hide {
+  display: none;
+}
+
+.close_return_date {
+  border-radius: 50%;
+  background: #1969D2;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  display: block;
+  text-align: center;
+  line-height: 20px;
+  position: absolute;
+  right: 0;
+  top: -8px;
+  cursor: pointer;
+}
+
+.main_banner_search_form_button {
+  margin-top: 40px;
+  width: 100%;
+}
+@media (max-width: 480px) {
+  .main_banner_search_form_button {
+    margin-bottom: 80px;
+  }
+}
+
+/*------ВЫВОД МАРШРУТА-------*/
+.poisk_marshrutov_conatiner_text {
+  margin-bottom: 32px;
+}
+.poisk_marshrutov_conatiner_text h4 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 122.8%;
+  margin-top: 40px;
+  margin-bottom: 12px;
+}
+@media (max-width: 480px) {
+  .poisk_marshrutov_conatiner_text h4 {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}
+.poisk_marshrutov_conatiner_text .poisk_marshrutov_date {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 122.8%;
+  color: #84A6BA;
+  margin-top: 17px;
+  margin-bottom: 30px;
+}
+@media (max-width: 480px) {
+  .poisk_marshrutov_conatiner_text .poisk_marshrutov_date {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+
+.vyvod_marshrutov {
+  width: 100%;
+  margin-bottom: 47px;
+}
+
+.vyvod_marshrutov_conatiner {
+  width: 100%;
+  border: 1px solid #DEEFFA;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.vyvod_marshrutov_conatiner:not(:nth-child(2)) {
+  margin-top: 12px;
+}
+
+.vyvod_marshrutov_info {
+  width: 75%;
+  border-right: 2px solid #DEEFFA;
+}
+@media (max-width: 480px) {
+  .vyvod_marshrutov_info {
+    width: 100%;
+    border-bottom: 2px solid #DEEFFA;
+    border-right: none;
+  }
+}
+
+.vyvod_marshrutov_info_top {
+  justify-content: space-between;
+  width: 100%;
+  padding: 50px 83px 32px 34px;
+}
+@media (max-width: 480px) {
+  .vyvod_marshrutov_info_top {
+    flex-direction: column;
+    padding: 10px;
+  }
+}
+
+.vyvod_marshrutov_info_bottom {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 122.8%;
+  color: #84A6BA;
+  padding: 0px 83px 12px 34px;
+}
+@media (max-width: 480px) {
+  .vyvod_marshrutov_info_bottom {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+
+.vyvod_marshrutov_info_marshruty_img {
+  flex-direction: column;
+  margin-right: 18px;
+}
+.vyvod_marshrutov_info_marshruty_img svg {
+  margin-bottom: 5px;
+}
+.vyvod_marshrutov_info_marshruty_img svg:last-child {
+  margin-bottom: 0px;
+}
+
+.vyvod_marshrutov_info_marshruty {
+  align-items: stretch;
+}
+
+.vyvod_marshrutov_info_time span {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 122.8%;
+}
+@media (max-width: 480px) {
+  .vyvod_marshrutov_info_time {
+    margin-top: 18px;
+  }
+}
+
+.vyvod_marshrutov_info_mesta span {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 122.8%;
+}
+@media (max-width: 480px) {
+  .vyvod_marshrutov_info_mesta {
+    margin-top: 18px;
+  }
+}
+
+.vyvod_marshrutov_price_container {
+  width: 25%;
+  position: relative;
+}
+.vyvod_marshrutov_price_container:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-right: 2px solid #DEEFFA;
+  border-bottom: 2px solid #DEEFFA;
+  width: 17px;
+  height: 17px;
+  transform: rotate(-42.27deg);
+  left: -9.5px;
+  background-color: #fff;
+}
+@media (max-width: 480px) {
+  .vyvod_marshrutov_price_container:before {
+    top: -9.5px;
+    left: 50%;
+    border-left: 2px solid #DEEFFA;
+    border-right: none;
+    transform: translateX(-50%) rotate(-42.27deg);
+  }
+}
+@media (max-width: 480px) {
+  .vyvod_marshrutov_price_container {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+.vyvod_marshrutov_price {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 122.8%;
+}
+@media (max-width: 480px) {
+  .vyvod_marshrutov_price {
+    font-size: 20px;
+  }
+}
+
+.vyvod_marshrutov_info_marshruty_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vyvod_marshrutov_info_marshrut .time {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 122.8%;
+  margin-right: 6px;
+}
+.vyvod_marshrutov_info_marshrut .date {
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 122.8%;
+  color: #84A6BA;
+  margin-right: 11px;
+}
+.vyvod_marshrutov_info_marshrut .city {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 122.8%;
+}
+
+.poisk_marshrutov_button {
+  width: 100%;
+  margin-bottom: 80px;
+}
+.poisk_marshrutov_button .button {
+  width: 300px;
+  height: 60px;
+  line-height: 60px;
+  padding: 0;
+}
+
+#vyvod_marshrutov_calendar .ui-datepicker {
+  width: 100%;
+}
+#vyvod_marshrutov_calendar .ui-datepicker-calendar tbody {
+  display: flex;
+}
+
+.vybor_text p {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 122.8%;
+  margin-bottom: 4px;
+}
+.vybor_text h4 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 122.8%;
+  margin-bottom: 15px;
+}
+
+.vyvod_marshrutov_conatiner.net-reisov {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  flex-direction: column;
+}
+
+.net-reisov-text {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 122.8%;
+  margin-top: 20px;
+}
+
+.dva-varianta input[type=checkbox] {
+  display: none;
+}
+.dva-varianta .select_price_checkbox_label:before {
+  cursor: pointer;
+  content: " ";
+  color: #84A6BA;
+  display: inline-block;
+  margin-right: 33px;
+  position: relative;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  vertical-align: middle;
+  border: 2px solid #DEEFFA;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 12px;
+  margin-bottom: 2px;
+}
+.dva-varianta input[type=checkbox]:checked + .select_price_checkbox_label:before {
+  content: "";
+  font-family: "icomoon";
+  font-weight: 600;
+  font-size: 34px;
+  border-color: #1969D2;
+  color: #1969D2;
+  padding-top: 7px;
+  padding-right: 7px;
+}
+.dva-varianta .poisk_marshrutov_button {
+  display: none;
+}
+
+.calendar {
+  position: relative;
+  display: none;
+}
+.calendar .ui-datepicker-current-day {
+  background-color: red;
+}
+.calendar .ui-datepicker {
+  width: 100%;
+}
+.calendar .ui-datepicker-title {
+  display: none;
+}
+.calendar .ui-corner-all {
+  display: none;
+}
+.calendar .ui-datepicker-calendar thead {
+  display: none;
+}
+.calendar .ui-datepicker-calendar tbody td {
+  padding: 20px;
 }

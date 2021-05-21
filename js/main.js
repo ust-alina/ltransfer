@@ -34,7 +34,7 @@ $(document).ready(function(){
 
 
             /*-----Включение Даты обратной поездки------*/
-$('#return').click(function(){
+      $('#return').click(function(){
       if ($(this).is(':checked')){
             $('.search_hide_field').addClass('show');
             $('.checked_field').addClass('hide');
@@ -51,12 +51,42 @@ $('#return').click(function(){
 
       });
 
- 
+      
+            /*-----Включение Даты обратной поездки поиск маршрута------*/
+      $('#seach_return').click(function(){
+      if ($(this).is(':checked')){
+            $('.search_hide_field').addClass('show');
+            $('.checked_field').addClass('hide');
+      } else {
+            $('.search_hide_field').removeClass('show');
+            $('.checked_field').removeClass('hide');
+      }
+      });
+
+      $('.close_return_date').click(function(){
+            $('.search_hide_field').removeClass('show');
+            $('.checked_field').removeClass('hide');
+            $('#seach_return').prop('checked', false);
+
+      });
+
+  /*-----Смена местами Поеду из Поеду В------*/
+
       $('.button_swap').click(function () {
             var v1 = $('#from').val(),
                 v2 = $('#to').val();
             $('#from').val(v2);
             $('#to').val(v1);
+        });
+
+
+         /*-----Смена местами Поеду из Поеду В СТРАНИЦА ПОИСКА МАРШРУТОВ------*/
+
+      $('.button_swap').click(function () {
+            var v1 = $('#seach_from').val(),
+                v2 = $('#seach_to').val();
+            $('#seach_from').val(v2);
+            $('#seach_to').val(v1);
         });
            
 
@@ -121,6 +151,29 @@ $('#page_return').click(function(){
 			$('.sidebar').removeClass("fixed");
 		}
 	});
+
+
+      $('#select_price-1').click(function(){
+            if ($(this).is(':checked')){
+                  $('.dva-varianta .poisk_marshrutov_button').css("display", "flex");
+                  $('#select_price-2').removeAttr("checked");
+
+
+            } else {
+                  $('.dva-varianta .poisk_marshrutov_button').css("display", "none");
+            }
+      });
+
+      $('#select_price-2').click(function(){
+            if ($(this).is(':checked')){
+                  $('.dva-varianta .poisk_marshrutov_button').css("display", "flex");
+                  $('#select_price-1').removeAttr("checked");
+
+
+            } else {
+                  $('.dva-varianta .poisk_marshrutov_button').css("display", "none");
+            }
+      });
 
 });
 
