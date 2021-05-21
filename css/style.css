@@ -2754,6 +2754,10 @@ ol li:before {
   display: none;
 }
 
+.vyvod_marshrutov_calendar {
+  display: none;
+}
+
 .calendar {
   position: relative;
   display: none;
