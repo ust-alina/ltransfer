@@ -3,7 +3,7 @@ $.datepicker.regional['ru'] = {
 	prevText: 'Предыдущий',
 	nextText: 'Следующий',
 	currentText: 'Сегодня',
-	monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+	monthNames: ['январь','февраль','март','апрель','май','июнь','июль','фвгуст','сентябрь','октябрь','ноябрь','декабрь'],
 	monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
 	dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
 	dayNamesShort: ['вс','пн','вт','ср','чт','пт','сб'],
@@ -25,9 +25,7 @@ $("#datepicker").datepicker({
 $("#datepicker_return").datepicker({
     minDate: 0,
 });
-$("#seach_datepicker_return").datepicker({
-    minDate: 0,
-});
+
 $("#page_datepicker").datepicker({
     minDate: 0,
 });
@@ -36,38 +34,91 @@ $("#page_datepicker_return").datepicker({
 });
 
 
-$("#seach_datepicker").datepicker({
-    minDate: 0,
+/*------РЕЙС В ОДНУ СТОРОНУ-------*/
+
+  var startDate = $('#seach_datepicker').val();
+  var formatStartDate = moment(startDate,'DD.MM.YYYY').format("D MMM YYYY, dddd"); 
+  $('.poisk_marshrutov_date').val(formatStartDate);
+
+  $("#seach_datepicker").datepicker({
 	onSelect: function(date){
-		$('#vyvod_marshrutov_calendar_value').val(date);
+        $('#vyvod_marshrutov_calendar').datepaginator('setSelectedDate', date);
+		var formatStartDate1 = moment(date,'DD.MM.YYYY').format("D MMM YYYY, dddd"); 
+		$('.poisk_marshrutov_date').val(formatStartDate1);
 	}
-});
 
+	
+});
 var chosenDate = $('#seach_datepicker').val();
-$('#vyvod_marshrutov_calendar_value').val(chosenDate);
-
-
-  $('#vyvod_marshrutov_calendar').datepicker({
-	monthNames: ['янв','фев','мрт','апр','май','июн',
-	'июл','авг','сен','окт','нбр','дек'],
-    numberOfMonths: 1,
-	showOtherMonths: true,
-	defaultDate: chosenDate,
-	altField: "#txt1",
-	altFormat: "D, d M",
-    //minDate: 0,
-    onSelect: function(date){
-		$('#vyvod_marshrutov_calendar_value').val(date);
-		$('#seach_datepicker').val(date);
-	}
-  });
-  
-
-  var chosenDate3 = $("#seach_datepicker").datepicker('getDate');
-  $('#vyvod_marshrutov_calendar').datepicker('setDate', chosenDate3);
 
 
 
-  
+var options = {
+	
+    //selectedDateFormat: 'dd.mm.yy',
+	showCalendar: false,
+	//setSelectedDate: chosenDate,
+	showOffDays: false,
+	injectStyle: false,
+	itemWidth: 155,
+	startDate: moment(new Date(2000, 1, 1)),
+    endDate: moment(new Date(2100, 1, 1)),
+	selectedDateFormat: 'DD.MM.YYYY',
+    selectedDate: chosenDate,
+	highlightToday: false,
+	textSelected: 'dd, D MMM',
+	text:  'dd, D MMM',
+    onSelectedDateChanged: function (event, date) {
+        var dateSelected = moment(date).format('DD.MM.YYYY');
+		$('#seach_datepicker').val(dateSelected);
+		var formatStartDate2 = moment(date,'DD.MM.YYYY').format("D MMM YYYY, dddd"); 
+		$('.poisk_marshrutov_date').val(formatStartDate2);
+    },
+	
+  }
+
+
+
+$('#vyvod_marshrutov_calendar').datepaginator(options);
+
+
+/*-----ОБРАТНО------*/
+
+
+$("#seach_datepicker_return").datepicker({
+  onSelect: function(date){
+	  $('#vyvod_marshrutov_calendar_obratno').datepaginator('setSelectedDate', date);
+  }
+
 });
+
+
+var options2 = {
+  
+  //selectedDateFormat: 'dd.mm.yy',
+  showCalendar: false,
+  //setSelectedDate: chosenDate,
+  showOffDays: false,
+  injectStyle: false,
+  itemWidth: 155,
+  startDate: moment(new Date(2000, 1, 1)),
+  endDate: moment(new Date(2100, 1, 1)),
+  selectedDateFormat: 'DD.MM.YYYY',
+  selectedDate: chosenDate,
+  highlightToday: false,
+  textSelected: 'dd, D MMM',
+  text:  'dd, D MMM',
+  onSelectedDateChanged: function (event, date) {
+	  var dateSelected = moment(date).format('DD.MM.YYYY');
+	  $('#seach_datepicker_return').val(dateSelected);
+  },
+  
+}
+
+
+$('#vyvod_marshrutov_calendar_obratno').datepaginator(options2);
+
+
+});
+
 

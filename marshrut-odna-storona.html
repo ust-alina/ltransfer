@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="fonts/icomoon/style.css">
     
+    <link rel="stylesheet" type="text/css" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/bootstrap-datepaginator.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Поиск билета</title>
   </head>
   <body>
@@ -188,20 +189,20 @@
 
 
     <div class="wrapper">
-      <div class="poisk_marshrutov_conatiner">
+      <div class="poisk_marshrutov_conatiner" itemscope itemtype="https://schema.org/Product">
         <div class="poisk_marshrutov_conatiner_text">
           <h4>Расписание  по маршруту</h4>
-          <h1>Вильнюс (Аэропорт) — Минск (Автовокзал)</h1>
-          <div class="poisk_marshrutov_date">22 апреля 2021, пятница.</div>
-          <p>Из-за пандемии коронавируса COVID-19 Литовская Республика объявила режим чрезвычайной ситуации, в связи с эти просим перед приобретением билета ознакамливаться с правилами въезда в Литовскую Республику в период пандемии COVID-19.</p>
+          <h1 itemprop="name">Вильнюс (Аэропорт) — Минск (Автовокзал)</h1>
+          <input type="text" class="poisk_marshrutov_date">
+          <!-- ТЕКСТ ДОЛЖЕН ВЫВОДИТЬСЯ ИЗ АДМИНКИ -->
+          <p itemprop="description">Из-за пандемии коронавируса COVID-19 Литовская Республика объявила режим чрезвычайной ситуации, в связи с эти просим перед приобретением билета ознакамливаться с правилами въезда в Литовскую Республику в период пандемии COVID-19.</p>
         </div>
 
         <div class="vyvod_marshrutov">
           <div class="calendar">
             <div class="vyvod_marshrutov_calendar" id="vyvod_marshrutov_calendar"></div>
-            <input type="hidden" id="vyvod_marshrutov_calendar_value" value="">
-            <input type="text" id="txt1">
           </div>
+         
           <div class="vyvod_marshrutov_conatiner">
             <div class="vyvod_marshrutov_info">
               <div class="vyvod_marshrutov_info_top">
@@ -257,8 +258,8 @@
               </div>
               <div class="vyvod_marshrutov_info_bottom">Отправление и прибытие указанно по местному в времени, время прибытия указанно ориентировочно!</div>
             </div>
-            <div class="vyvod_marshrutov_price_container">
-              <div class="vyvod_marshrutov_price">35,00 BYN </div>
+            <div class="vyvod_marshrutov_price_container" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+              <div class="vyvod_marshrutov_price" itemprop="price" content="35">35,00 <span itemprop="priceCurrency" content="BYN">BYN </span></div>
             </div>
           </div>
         </div>
@@ -332,6 +333,9 @@
   <script src='js/main.js'></script> 
   <!--Подключаем date.JS-->
   <script src='js/date.js'></script> 
+  <script src='js/moment.js'></script> 
+  <script src='js/ru.js'></script> 
+  <script src='js/bootstrap-datepaginator.js'></script> 
   
   </body>
 </html>

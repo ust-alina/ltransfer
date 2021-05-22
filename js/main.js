@@ -70,6 +70,12 @@ $(document).ready(function(){
 
       });
 
+      if ($(".marshrut_obratno").length){
+            $('#seach_return').prop('checked', true);
+            $('.search_hide_field').addClass('show');
+            $('.checked_field').addClass('hide');
+      }
+
   /*-----Смена местами Поеду из Поеду В------*/
 
       $('.button_swap').click(function () {
@@ -153,6 +159,8 @@ $('#page_return').click(function(){
 	});
 
 
+      /*----ВКлючение кнопки оформить страница маршрута---*/
+
       $('#select_price-1').click(function(){
             if ($(this).is(':checked')){
                   $('.dva-varianta .poisk_marshrutov_button').css("display", "flex");
@@ -174,6 +182,7 @@ $('#page_return').click(function(){
                   $('.dva-varianta .poisk_marshrutov_button').css("display", "none");
             }
       });
+
 
 });
 

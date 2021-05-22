@@ -2161,13 +2161,16 @@ input[type="checkbox"]:checked + .page_return_checkbox_label:before {
     box-sizing: border-box;
     border-radius: 5px;
     @extend %flex_container; 
+    @media  (max-width: 1070px) {
+      width: 100%;
+    }
     @media  (max-width: 480px) {
       width: 100%;
     }
   }
 
 
-  @media  (max-width: 480px) {
+  @media  (max-width: 1070px) {
   .checked_field {
     margin-top: 28px;
     .field_container {
@@ -2372,6 +2375,7 @@ input[type="checkbox"]:checked + .page_return_checkbox_label:before {
     color: #84A6BA;
     margin-top: 17px;
     margin-bottom: 30px;
+    width: 100%;
     @media  (max-width: 480px) {
       font-size: 16px;
       margin-bottom: 20px;
@@ -2390,11 +2394,15 @@ input[type="checkbox"]:checked + .page_return_checkbox_label:before {
   @extend %flex_container; 
   border: 1px solid #DEEFFA;
   box-sizing: border-box;
-  border-radius: 5px;  
+  border-bottom-left-radius: 5px;  
+  border-bottom-right-radius: 5px;  
   &:not(:nth-child(2)) {
     margin-top: 12px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
   }
 }
+
 
 .vyvod_marshrutov_info {
   width: 75%;
@@ -2455,7 +2463,7 @@ input[type="checkbox"]:checked + .page_return_checkbox_label:before {
   line-height: 122.8%;
 
   }
-  @media  (max-width: 480px) {
+  @media  (max-width: 1070px) {
     margin-top: 18px;
   }
 }
@@ -2466,7 +2474,7 @@ input[type="checkbox"]:checked + .page_return_checkbox_label:before {
   font-size: 18px;
   line-height: 122.8%;
   }
-  @media  (max-width: 480px) {
+  @media  (max-width: 1070px) {
     margin-top: 18px;
   }
 }
@@ -2640,35 +2648,89 @@ input[type="checkbox"]:checked + .page_return_checkbox_label:before {
 }
 
 
-.calendar {
-  position: relative;
-  display: none;
-  .ui-datepicker-current-day {
-    background-color: red;
-  }
-
-.ui-datepicker {
-  width: 100%;
-}
-
-.ui-datepicker-title {
-  display: none;
-}
-
-.ui-corner-all {
-  display:none;
-}
-
-.ui-datepicker-calendar {
-  thead {
-    display: none;
-  }
-  tbody {
-    td{
-      padding: 20px;
+.pagination {
+  display: flex;
+  width:100%;
+  background: #EFF9FF;
+  border: 1px solid #DEEFFA;
+  border-bottom: none;
+  border-radius: 5px 5px 0px 0px;
+  
+  .dp-nav-left {
+    background-image: url(../source/img/Arrow_left.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 24px !important;
+    @media  (max-width: 480px) {
+      width:18px !important;
     }
   }
-}
+  .dp-nav-right {
+    background-image: url(../source/img/Arrow_right.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 24px !important;
+    @media  (max-width: 480px) {
+      width:18px !important;
+    }
+  }
+  li {
+    width: 15%;
+    @extend %flex_container; 
+    
+    position: relative;
+    height: 62px;
+    @media  (max-width: 768px) {
+      width: 30%;
+    }
+    @media  (max-width: 480px) {
+      width: 41%;
+      justify-content: space-around;
+    }
+    a {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 62px;
+      color: #1969D2;
+      width: 100%;
+      padding: 0 !important;
+      &.dp-divider {
+        border: none !important;
+      }
+      &.dp-selected {
 
+        position: absolute;
+        bottom:0;
+        background-color: #FFFFFF !important;
+        border: 1px solid #DEEFFA !important;
+        border-left: 1px solid #DEEFFA !important;
+        box-sizing: border-box;
+        border-radius: 5px 5px 0px 0px;
+        color: #000000 !important;
+        height: 72px;
+        line-height: 72px;
+      }
+    }
+    &:last-child {
+      width: 44px;
+      padding-right: 20px;
+      @media  (max-width: 480px) {
+        width: 34px;
+        padding-right: 10px;
+      }
+    }
+    &:first-child {
+      width: 44px;
+      padding-left: 20px;
+      @media  (max-width: 480px) {
+        width: 34px;
+        padding-left: 10px;
+      }
+    }
+  }
+  .li-dp-selected {
+    width: 100%;
+  }
 }
-

@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
-.vyvod_marshrutov_conatiner.net-reisov, .poisk_marshrutov_button, .vyvod_marshrutov_price_container, .vyvod_marshrutov_info_marshruty, .vyvod_marshrutov_info_marshruty_img, .vyvod_marshrutov_info_top, .vyvod_marshrutov_conatiner, .poisk_marshrutov_search_form .button_swap_container, .poisk_marshrutov_search_form .field_container, .poisk_marshrutov_search_form, .page_search_form_button, .route_time_table td:first-child, .help_container, .main_popular_link, .why_box, .container, .main_banner_search_form_button, .field_container, .main_banner_search_form, .header_select, .header_phone a:first-child, .header_phone, .header_navbar ul, .header_center_block, .header {
+.pagination li, .vyvod_marshrutov_conatiner.net-reisov, .poisk_marshrutov_button, .vyvod_marshrutov_price_container, .vyvod_marshrutov_info_marshruty, .vyvod_marshrutov_info_marshruty_img, .vyvod_marshrutov_info_top, .vyvod_marshrutov_conatiner, .poisk_marshrutov_search_form .button_swap_container, .poisk_marshrutov_search_form .field_container, .poisk_marshrutov_search_form, .page_search_form_button, .route_time_table td:first-child, .help_container, .main_popular_link, .why_box, .container, .main_banner_search_form_button, .field_container, .main_banner_search_form, .header_select, .header_phone a:first-child, .header_phone, .header_navbar ul, .header_center_block, .header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2311,12 +2311,17 @@ ol li:before {
   box-sizing: border-box;
   border-radius: 5px;
 }
-@media (max-width: 480px) {
+@media (max-width: 1070px) {
   .poisk_marshrutov_search_form .field_container {
     width: 100%;
   }
 }
 @media (max-width: 480px) {
+  .poisk_marshrutov_search_form .field_container {
+    width: 100%;
+  }
+}
+@media (max-width: 1070px) {
   .poisk_marshrutov_search_form .checked_field {
     margin-top: 28px;
   }
@@ -2506,6 +2511,7 @@ ol li:before {
   color: #84A6BA;
   margin-top: 17px;
   margin-bottom: 30px;
+  width: 100%;
 }
 @media (max-width: 480px) {
   .poisk_marshrutov_conatiner_text .poisk_marshrutov_date {
@@ -2523,10 +2529,13 @@ ol li:before {
   width: 100%;
   border: 1px solid #DEEFFA;
   box-sizing: border-box;
-  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .vyvod_marshrutov_conatiner:not(:nth-child(2)) {
   margin-top: 12px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .vyvod_marshrutov_info {
@@ -2587,7 +2596,7 @@ ol li:before {
   font-size: 18px;
   line-height: 122.8%;
 }
-@media (max-width: 480px) {
+@media (max-width: 1070px) {
   .vyvod_marshrutov_info_time {
     margin-top: 18px;
   }
@@ -2598,7 +2607,7 @@ ol li:before {
   font-size: 18px;
   line-height: 122.8%;
 }
-@media (max-width: 480px) {
+@media (max-width: 1070px) {
   .vyvod_marshrutov_info_mesta {
     margin-top: 18px;
   }
@@ -2754,29 +2763,97 @@ ol li:before {
   display: none;
 }
 
-.vyvod_marshrutov_calendar {
-  display: none;
-}
-
-.calendar {
-  position: relative;
-  display: none;
-}
-.calendar .ui-datepicker-current-day {
-  background-color: red;
-}
-.calendar .ui-datepicker {
+.pagination {
+  display: flex;
   width: 100%;
+  background: #EFF9FF;
+  border: 1px solid #DEEFFA;
+  border-bottom: none;
+  border-radius: 5px 5px 0px 0px;
 }
-.calendar .ui-datepicker-title {
-  display: none;
+.pagination .dp-nav-left {
+  background-image: url(../source/img/Arrow_left.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 24px !important;
 }
-.calendar .ui-corner-all {
-  display: none;
+@media (max-width: 480px) {
+  .pagination .dp-nav-left {
+    width: 18px !important;
+  }
 }
-.calendar .ui-datepicker-calendar thead {
-  display: none;
+.pagination .dp-nav-right {
+  background-image: url(../source/img/Arrow_right.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 24px !important;
 }
-.calendar .ui-datepicker-calendar tbody td {
-  padding: 20px;
+@media (max-width: 480px) {
+  .pagination .dp-nav-right {
+    width: 18px !important;
+  }
+}
+.pagination li {
+  width: 15%;
+  position: relative;
+  height: 62px;
+}
+@media (max-width: 768px) {
+  .pagination li {
+    width: 30%;
+  }
+}
+@media (max-width: 480px) {
+  .pagination li {
+    width: 41%;
+    justify-content: space-around;
+  }
+}
+.pagination li a {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 62px;
+  color: #1969D2;
+  width: 100%;
+  padding: 0 !important;
+}
+.pagination li a.dp-divider {
+  border: none !important;
+}
+.pagination li a.dp-selected {
+  position: absolute;
+  bottom: 0;
+  background-color: #FFFFFF !important;
+  border: 1px solid #DEEFFA !important;
+  border-left: 1px solid #DEEFFA !important;
+  box-sizing: border-box;
+  border-radius: 5px 5px 0px 0px;
+  color: #000000 !important;
+  height: 72px;
+  line-height: 72px;
+}
+.pagination li:last-child {
+  width: 44px;
+  padding-right: 20px;
+}
+@media (max-width: 480px) {
+  .pagination li:last-child {
+    width: 34px;
+    padding-right: 10px;
+  }
+}
+.pagination li:first-child {
+  width: 44px;
+  padding-left: 20px;
+}
+@media (max-width: 480px) {
+  .pagination li:first-child {
+    width: 34px;
+    padding-left: 10px;
+  }
+}
+.pagination .li-dp-selected {
+  width: 100%;
 }
