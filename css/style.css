@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
-.pagination li, .vyvod_marshrutov_conatiner.net-reisov, .poisk_marshrutov_button, .vyvod_marshrutov_price_container, .vyvod_marshrutov_info_marshruty, .vyvod_marshrutov_info_marshruty_img, .vyvod_marshrutov_info_top, .vyvod_marshrutov_conatiner, .poisk_marshrutov_search_form .button_swap_container, .poisk_marshrutov_search_form .field_container, .poisk_marshrutov_search_form, .page_search_form_button, .route_time_table td:first-child, .help_container, .main_popular_link, .why_box, .container, .main_banner_search_form_button, .field_container, .main_banner_search_form, .header_select, .header_phone a:first-child, .header_phone, .header_navbar ul, .header_center_block, .header {
+.oformlenie_pasazhiry_vybor .vybor_block, .oformlenie_pasazhiry_vybor, .pagination li, .vyvod_marshrutov_conatiner.net-reisov, .poisk_marshrutov_button, .vyvod_marshrutov_price_container, .vyvod_marshrutov_info_marshruty, .vyvod_marshrutov_info_marshruty_img, .vyvod_marshrutov_info_top, .vyvod_marshrutov_conatiner, .poisk_marshrutov_search_form .button_swap_container, .poisk_marshrutov_search_form .field_container, .poisk_marshrutov_search_form, .page_search_form_button, .route_time_table td:first-child, .help_container, .main_popular_link, .why_box, .container, .main_banner_search_form_button, .field_container, .main_banner_search_form, .header_select, .header_phone a:first-child, .header_phone, .header_navbar ul, .header_center_block, .header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1459,7 +1459,7 @@ body {
 }
 .breadcrumbs ul li {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 122.8%;
   color: #84A6BA;
   margin-right: 11px;
@@ -1467,7 +1467,7 @@ body {
 .breadcrumbs ul li a {
   color: #84A6BA;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 122.8%;
 }
 .breadcrumbs ul li:last-child {
@@ -2856,4 +2856,395 @@ ol li:before {
 }
 .pagination .li-dp-selected {
   width: 100%;
+}
+
+/*---------------ОФОРМЛЕНИЕ ЗАКАЗА-------------------*/
+.oformlenie_marshrut_container {
+  margin-top: 20px;
+}
+.oformlenie_marshrut_container .oformlenie_marshrut span {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 122.8%;
+}
+@media (max-width: 480px) {
+  .oformlenie_marshrut_container .oformlenie_marshrut span {
+    font-size: 16px;
+  }
+}
+.oformlenie_marshrut_container .oformlenie_marshrut span.data {
+  font-weight: bold;
+}
+.oformlenie_marshrut_container .oformlenie_marshrut span:first-child {
+  margin-right: 25px;
+}
+@media (max-width: 480px) {
+  .oformlenie_marshrut_container .oformlenie_marshrut span:first-child {
+    display: block;
+  }
+}
+.oformlenie_marshrut_container p {
+  font-size: 14px;
+}
+@media (max-width: 480px) {
+  .oformlenie_marshrut_container p {
+    font-size: 10px;
+  }
+}
+
+.oformlenie_pasazhiry {
+  margin-top: 20px;
+}
+
+.oformlenie_pasazhiry_vybor {
+  margin-top: 12px;
+  padding: 30px 55px 35px;
+  width: 100%;
+  border: 1px solid #DEEFFA;
+  box-sizing: border-box;
+  border-radius: 5px;
+  justify-content: space-around;
+}
+@media (max-width: 768px) {
+  .oformlenie_pasazhiry_vybor {
+    padding: 25px;
+  }
+}
+@media (max-width: 1024px) {
+  .oformlenie_pasazhiry_vybor .vybor_block {
+    width: 100%;
+    margin-bottom: 20px;
+    justify-content: space-between;
+  }
+}
+.oformlenie_pasazhiry_vybor .vybor_block .vybor_title .vybor_type {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 122.8%;
+  margin-bottom: 5px;
+  color: #000;
+}
+@media (max-width: 480px) {
+  .oformlenie_pasazhiry_vybor .vybor_block .vybor_title .vybor_type {
+    font-size: 16px;
+  }
+}
+.oformlenie_pasazhiry_vybor .vybor_block .vybor_title .vybor_type_bottom {
+  color: #84A6BA;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 122.8%;
+}
+@media (max-width: 480px) {
+  .oformlenie_pasazhiry_vybor .vybor_block .vybor_title .vybor_type_bottom {
+    font-size: 14px;
+  }
+}
+.oformlenie_pasazhiry_vybor .vybor_block .counter {
+  margin-left: 34px;
+  background: #EFF9FF;
+  border: 1px solid #DEEFFA;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 139px;
+  height: 49px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 480px) {
+  .oformlenie_pasazhiry_vybor .vybor_block .counter {
+    margin-left: 20px;
+    width: 130px;
+  }
+}
+.oformlenie_pasazhiry_vybor .vybor_block .counter input {
+  width: 72px;
+  background-color: transparent;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 122.8%;
+  color: #000000;
+}
+@media (max-width: 480px) {
+  .oformlenie_pasazhiry_vybor .vybor_block .counter input {
+    font-size: 16px;
+    width: 63px;
+  }
+}
+.oformlenie_pasazhiry_vybor .vybor_block .counter button {
+  width: 33.5px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 122.8%;
+  background-color: transparent;
+}
+.oformlenie_pasazhiry_vybor .vybor_block .counter button:first-child {
+  border-right: 1px solid #DEEFFA;
+}
+.oformlenie_pasazhiry_vybor .vybor_block .counter button:last-child {
+  border-left: 1px solid #DEEFFA;
+}
+
+.oformlenie_pasazhiry_polya {
+  width: 100%;
+  height: auto;
+  padding: 37px 55px 58px;
+  border: 1px solid #DEEFFA;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-top: 22px;
+  margin-bottom: 58px;
+}
+@media (max-width: 768px) {
+  .oformlenie_pasazhiry_polya {
+    padding: 25px;
+  }
+}
+
+.form_price {
+  display: flex;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 122.8%;
+  color: #000000;
+  margin-left: 35px;
+}
+.form_price .adult_price {
+  margin: 0 5px;
+}
+.form_price .child_price {
+  margin: 0 5px;
+}
+.form_price .baby_price {
+  margin: 0 5px;
+}
+
+.oformlenie_form_container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 1000px) {
+  .oformlenie_form_container .oformlenie_form_left_block {
+    order: 2;
+  }
+}
+@media (max-width: 1000px) {
+  .oformlenie_form_container .oformlenie_form_right_block {
+    order: 1;
+    width: 100%;
+  }
+}
+
+.oformlenie_form_field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 38px;
+  width: 100%;
+}
+.oformlenie_form_field label {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 122.8%;
+  color: #000000;
+  margin-bottom: 4px;
+}
+@media (max-width: 480px) {
+  .oformlenie_form_field label {
+    font-size: 16px;
+  }
+}
+.oformlenie_form_field input {
+  background: #EFF9FF;
+  border: 1px solid #DEEFFA;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 420px;
+  height: 49px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 122.8%;
+  padding-left: 24px;
+}
+@media (max-width: 480px) {
+  .oformlenie_form_field input {
+    width: 100%;
+  }
+}
+.oformlenie_form_field .error {
+  margin-top: 5px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 122.8%;
+  display: none;
+}
+@media (max-width: 480px) {
+  .oformlenie_form_field .error {
+    font-size: 10px;
+  }
+}
+
+.oformlenie_form_field_price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 480px) {
+  .oformlenie_form_field_price {
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+}
+
+.oformlenie_form_bottom_row {
+  width: 100%;
+  display: flex;
+}
+@media (max-width: 768px) {
+  .oformlenie_form_bottom_row {
+    flex-wrap: wrap;
+  }
+}
+.oformlenie_form_bottom_row button {
+  background: #1969D2;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  width: 183px;
+  height: 64px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 122.8%;
+  color: #FFFFFF;
+}
+@media (max-width: 480px) {
+  .oformlenie_form_bottom_row button {
+    font-size: 16px;
+    height: 50px;
+  }
+}
+.oformlenie_form_bottom_row .oformlenie_form_bottom_text {
+  margin-left: 28px;
+}
+@media (max-width: 768px) {
+  .oformlenie_form_bottom_row .oformlenie_form_bottom_text {
+    margin-left: 0px;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+.oformlenie_form_bottom_row .oformlenie_form_bottom_text span {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 122.8%;
+  color: #000000;
+}
+.oformlenie_form_bottom_row .oformlenie_form_bottom_text span input {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 122.8%;
+  color: #000000;
+  width: 40px;
+}
+.oformlenie_form_bottom_row .oformlenie_form_bottom_text p {
+  margin-top: 11px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 122.8%;
+  color: #84A6BA;
+}
+.oformlenie_form_bottom_row .oformlenie_form_bottom_text p a {
+  text-decoration: underline;
+  color: #84A6BA;
+}
+
+/*--------------РАСПИСАНИЕ-----------------*/
+.raspisanie_title {
+  margin-top: 32px;
+}
+.raspisanie_title p {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 122.8%;
+  color: #84A6BA;
+  margin-top: 8px;
+}
+
+.raspisanie_marshruty {
+  margin-top: 60px;
+}
+.raspisanie_marshruty .raspisanie_marshruty_row {
+  margin-bottom: 50px;
+}
+.raspisanie_marshruty .raspisanie_marshruty_row .raspisanie_marshruty_title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 122.8%;
+  color: #000000;
+  margin-bottom: 15px;
+}
+@media (max-width: 480px) {
+  .raspisanie_marshruty .raspisanie_marshruty_row .raspisanie_marshruty_title {
+    font-size: 22px;
+  }
+}
+.raspisanie_marshruty .raspisanie_marshruty_row ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .raspisanie_marshruty .raspisanie_marshruty_row ul {
+    justify-content: flex-start;
+  }
+}
+.raspisanie_marshruty .raspisanie_marshruty_row ul li {
+  border-bottom: 2px dashed #84A6BA;
+}
+@media (max-width: 768px) {
+  .raspisanie_marshruty .raspisanie_marshruty_row ul li {
+    margin-right: 15px;
+    margin-top: 10px;
+  }
+}
+.raspisanie_marshruty .raspisanie_marshruty_row ul li:hover {
+  border-bottom: none;
+}
+.raspisanie_marshruty .raspisanie_marshruty_row ul li:hover a {
+  color: #1969D2;
+}
+.raspisanie_marshruty .raspisanie_marshruty_row ul li a {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 122.8%;
+  color: #000000;
+}
+@media (max-width: 480px) {
+  .raspisanie_marshruty .raspisanie_marshruty_row ul li a {
+    font-size: 16px;
+  }
+}
+
+.raspisanie_grafik {
+  margin-bottom: 100px;
+}
+.raspisanie_grafik .routs_tables {
+  max-width: 840px;
+  width: 100%;
+  margin: 0 auto;
+}
+.raspisanie_grafik .routs_tables h3 {
+  text-align: center;
+}
+.raspisanie_grafik .routs_tables .route_time_table {
+  margin-bottom: 6px;
+}
+.raspisanie_grafik .raspisanie_line {
+  width: 100%;
+  height: 3px;
+  background-color: #DDDDDD;
+  margin-bottom: 32px;
 }
